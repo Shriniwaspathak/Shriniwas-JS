@@ -1,0 +1,33 @@
+<script>
+    
+    function palindrome(){
+   let first=document.getElementById('str').value;
+   let second=document.getElementById('str1').value;
+   strArray=first.split('');
+   strArray1=second.split('');
+   var newStr='';
+   var flag=false;
+
+   for(var i=0;i<strArray.length;i++){
+       for(var j=strArray1.length-1;j<strArray1.length;j--){
+           if(strArray[i]==strArray1[j]){
+              flag=true;
+              console.log(strArray1[j]);
+              console.log(strArray[i]);
+            }
+            console.log(flag);
+       }
+     
+   }
+
+   if(flag){
+       console.log("Not Palindrrome");
+   }else{
+       console.log("Palindrome");
+   }
+
+}
+</script>
+Enter First String:<input type="text" id="str"><br><br>
+Enter 2nd String :<input type="text" id="str1"><br>
+      <button onclick="palindrome()">click</button>

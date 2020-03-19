@@ -1,0 +1,40 @@
+<html>
+<body style="text-align: justify; color:sandybrown ; background-color: saddlebrown; background-image: url('images.JFIF');">
+<script>
+    function guessNumber(){
+        var userNumber=document.getElementById('textNummber').value;
+        
+         var changetoInt=parseInt(userNumber);
+         var arrayNum=changetoInt.toString(10).replace(/\D/g, '0').split('').map(Number);
+        
+        // getting the generated number here.
+            var storeNum=localStorage.getItem("number");
+            var storeintNum=parseInt(storeNum);
+            var arraygenNum = storeintNum.toString(10).replace(/\D/g, '0').split('').map(Number);
+            
+            // comparing both of array and counting the matching number.
+            var count=0;
+            for(var i=0;i<arraygenNum.length;i++){
+                  for(var j=0;j<arrayNum.length;j++){
+                      if( arraygenNum[i]==arrayNum[j]){
+                          arrayNum[j]==0;
+                          count++;
+                          break;
+                      }   
+                }
+                document.getElementById('count').innerHTML=count;
+            }
+         }
+           function replyGame(){
+           window.location="C:\\Users\\Shriniwas Pathak\\Desktop\\MemoryGame\\RandomNumber.html";
+}
+</script>
+</body>
+<div style="background-color:rgb(129, 192, 156); width: 60%; margin: auto ;border: 3px;padding: 10px; ">
+<h1>Guess the number </h1>
+<p id="count"></p>
+<input maxlength="6"  type="text" id="textNummber" required><br> <br>
+<input type="button" value="Guess" onclick="guessNumber()">
+<input type="button" value="Replay Game" onclick="replyGame()">
+</div>
+</html>

@@ -1,0 +1,13 @@
+<script>
+    function add(){
+        var a=document.getElementById("one").value;
+        var b=document.getElementById("two").value;
+        var c=parseInt(a)+parseInt(b);
+        document.getElementById("sum").value=c;
+
+    }
+</script>
+Enter 1st Number:<input type="text" id="one"/></br>
+Enter 2nd Number:<input type="text" id="two"/></br>
+<button onclick="add()">Add</button></br>
+Sum:<input type="text"id="sum"/>

@@ -1,0 +1,25 @@
+<script>
+    function reverse(){
+        //alert("hi");
+     var str=document.getElementById('num').value;
+     
+     var strArray=str.split('');
+     //console.log(strArray);
+     var str3='';
+     for(var i=strArray.length-1;i>=0;i--){
+         //alert("bewyfug");
+         str3 += strArray[i];
+        
+         
+     }
+    
+     
+     document.getElementById('num1').value=str3 ;
+    }
+
+</script>
+<form >
+<input type="text" id="num" onkeyup="reverse()"><br><br>
+<input type="text " id="num1"><br>
+
+</form>

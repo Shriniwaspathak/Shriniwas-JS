@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <div id="one">
+            My name is Rishu
+            <button onclick="fun('one')">div1</button>
+        </div>
+        <div id="two">
+            My name is Rishu
+            <button onclick="fun('two')">div2</button>
+        </div>
+        <div id="three">
+            My name is Rishu
+            <button onclick="fun('three')">div3</button>
+        </div>
+        <button onclick="mywholepage()">WholePage</button>
+        <script>
+            function mywholepage(){
+                window.print();
+            }
+            function fun(paravalue){
+             var para= document.body.innerHTML;
+              var divcontent=document.getElementById(paravalue).innerHTML;
+             document.body.innerHTML=divcontent;
+             window.print();
+             document.body.innerHTML=para;
+            }
+        </script>
+    </body>
+</html>

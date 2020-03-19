@@ -1,0 +1,119 @@
+<script>
+    
+    
+var Student={
+    
+   rishu123:{
+          name:"rishu",
+          email:"rishu@gmail.com",
+          phone:'9006221015',
+          class:'rishu123',
+          certificate:{
+                     course:'science',
+                     subject:'physics',
+                     certified:false
+
+                    }
+        },
+      
+        gourav123:{
+          name:"gourav",
+          email:"gourav@gmail.com",
+          phone:'98745489415',
+          class:'gourav123',
+          certificate:{
+                     course:'Arts',
+                     subject:'History',
+                     certified:true
+
+                    }
+        },
+
+        sourav123:{
+          name:"sourav",
+          email:"sourav@gmail.com",
+          phone:'7384562585',
+          class:'sourav123',
+          certificate:{
+                     course:'java',
+                     subject:'thread',
+                     certified:true
+
+                    }
+        },
+
+        aryan123:{
+          name:"Aryan",
+          email:"aryan@gmail.com",
+          phone:'564894654894',
+          class:'aryan123',
+          certificate:{
+                     course:'Aptitude',
+                     subject:'program',
+                     certified:false
+
+                    }
+        },
+
+        mitali123:{
+          name:"mitali",
+          email:"mitali@gmail.com",
+          phone:'9142586588',
+          class:'mitali123',
+          certificate:{
+                     course:'something',
+                     subject:'sql',
+                     certified:true
+
+                    }
+        },
+
+        Shruti123:{
+          name:'shruti',
+          email:"shruti@gmail.com",
+          phone:'91564654865',
+          class:'shruti123',
+          certificate:{
+                     course:'web development',
+                     subject:'css',
+                     certified:true
+
+                    }
+        },
+        
+        shubham123:{
+          name:"shubham",
+          email:"shubham@gmail.com",
+          phone:'54894189484',
+          class:'shubham123',
+          certificate:{
+                     course:'stuff',
+                     subject:'cigrett',
+                     certified:false
+
+                    }
+        }
+     
+}
+
+//console.log(`the name is ${Student.shubham123.name}`);
+var keys =  Object.keys(Student);
+console.log(keys);
+function fun(){
+
+let details=document.getElementById('id').value;
+for (keys in Student){
+   // if(details==keys){
+       if(Student[keys].certificate.certified==false){
+           console.log(Student[keys]);
+       }
+    }  
+}
+
+</script>
+
+
+
+
+Enter User ID:<input type="text" id="id"><br><br>
+<button onclick="fun()">click</button>

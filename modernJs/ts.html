@@ -1,0 +1,28 @@
+<script>
+    //template literals
+    //es5
+    console.log("my name is rishu" + " sir name is pathak ");
+    //es6
+    console.log(`my name is rishu sir name is pathak `);
+    //es5
+    let name ="rishu";
+    let sname="pathak";
+    console.log(name +" "+ sname);
+    //es6
+    console.log(`${name} ${sname}`)
+    //es5
+    let a=20;
+    let b=30;
+    console.log("the number is" +(a+b)+"and \n not"+(2*a+b));
+    //es6
+    console.log(`fifty is ${a+b} and 
+    not ${2*a+b}`);
+
+    //es6 String methods
+    const names=`${name }`;
+    const fullname=`${name}${sname} `;
+    console.log(names.startsWith('r'));
+    console.log(names.endsWith('u'));
+    console.log(names.includes('ish'));
+    console.log( fullname .repeat(5));
+</script>

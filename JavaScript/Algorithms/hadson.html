@@ -1,0 +1,41 @@
+<script>
+    function changeString(){
+    var str=document.getElementById('in').value;
+    var str1=document.getElementById('in').innerHTML=str.split("");
+    var temp="";
+    var temp1="";
+    var result="";
+    for(var i=0;i<str1.length;i++){
+        
+        if(str1[i]>=65 || str1[i]<=90){
+            temp1+=str1[i].value.toLowerCase();
+            console.log(temp1);
+        } else if(str1[i]>=97 || str1[i]<=122){
+            temp +=str1[i].value.toUpperCase();
+            console.log(temp);
+           
+        }
+    }
+result=temp+temp1;
+console.log(result);
+
+
+// for(i=0;i<str.length;i++){
+
+// if(str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
+
+//   console.log(str.toLowerCase(i));
+
+// }
+// else if(str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122){
+// console.log(str.toUpperCase(i));
+// }
+// }
+
+}
+
+    
+</script>
+<h1>Write Something to get change</h1>
+<input type="text" id="in">
+<button onclick="changeString()">Click Here</button>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <body>
+         <script>
+             function fun(){
+               // correct_way=/^[A-Za-z0-9@$%^&*!]$/;
+                 var pass=document.getElementById('pass').value;
+                 var cnfpass=document.getElementById('pass1').value;
+                 if(pass==""){
+                     document.getElementById('message').innerHTML="enter the password";
+                     return false;
+                 }
+                 if(pass.length<6){
+                    document.getElementById('message').innerHTML="password is too short";
+                     return false;
+                 }
+                 if(pass.length>20){
+                    document.getElementById('message').innerHTML="password should be less than 20";
+                     return false;
+                 }
+                //  if(pass.match(correct_way)){
+                //      true;
+                //     } else{
+                //         document.getElementById('message').innerHTML="password is not acceptable";
+                //      return false;
+                //      }
+                 if(pass!=cnfpass){
+                        document.getElementById('message1').innerHTML="password is not matching ";
+                     return false;
+                     }
+             
+}
+         </script>
+            <form onsubmit="return fun()">
+             Password : <input type="password" id="pass" value="">
+             <span id="message" style="color: red;"></span><br>
+             Confirm Password : <input type="password" id="pass1" value="">
+             <span id="message1" style="color: red;"></span>
+             <input type="submit" value="submit" value="submit">
+            </form>
+        </body>
+    </head>
+</html>

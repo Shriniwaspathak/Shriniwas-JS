@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function gene(){
+			var x = Math.floor(100000 + Math.random() * 900000);
+			var c =x+"";
+			var b =localStorage.setItem("c",c);
+			console.log(b);
+			document.getElementById('rando').innerHTML=x;
+			document.getElementById('info').style.display="block";
+			var count =5;
+			setInterval(function(){
+				count--;
+				document.getElementById('countdown').innerHTML="The page will redirect in  "+count+"sec";
+				if(count ==0){
+					window.location="file:///C:/Users/USER/Desktop/Game/index.html";
+				}
+			},1000);
+			
+
+			return false;
+			
+		}
+		
+
+	</script>
+	<div>
+		<h1>Generate the number</h1>
+		<p id="rando"></p>
+		<p id="countdown"></p>
+		<p id ="info" hidden></p>
+		<input type="button" value="generate" onclick="gene()">
+	</div>
+</body>
+</html>

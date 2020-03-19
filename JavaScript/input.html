@@ -1,0 +1,68 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+       <script>
+           function countWords(){
+               let Sentence=document.getElementById('str').value;  
+             let  array=Sentence.split(" ");
+            console.log(array);
+                let arrayOfSentence=[];
+                let sortArray=[];
+                let countArray=[];
+                let count=0;
+                arrayOfSentence=getUnique(array);
+                console.log(arrayOfSentence);
+                for(let uniqueWords  in arrayOfSentence){
+                   if(null===arrayOfSentence[uniqueWords]){
+                       break;
+                    }
+                  for(let  words in array ){
+                      if(array[words]===arrayOfSentence[uniqueWords]){
+                         count++;
+                      }
+                }
+                sortArray =arrayOfSentence[uniqueWords];
+                countArray=count;
+
+
+                console.log(sortArray);
+                console.log(countArray);
+               // document.write(`Occurance of word [${arrayOfSentence[uniqueWords]}] is = ${count} <br>`);
+               document.write(`Occurance of word [${sortArray}] is = ${countArray} <br>`);
+                count=0;
+
+           }   
+          function getUnique(array){
+              let length=array.length;
+              console.log(array);
+              let unique=[];
+              unique[0]=array[0];
+              let index=1;
+              let existance=false;
+              for(let i=1;i<array.length;i++){
+                 for(let j=0;j<index;j++){
+                     if(array[i]===unique[j]){
+                         existance=true;
+                     }
+                 }
+                  if(!existance){
+                      unique[index]=array[i];
+                      index++;
+                  }     
+                  existance=false;
+              }
+              return unique;
+          }
+        }
+           
+       </script>
+       <table>
+           <p> 
+         Enter Sentence: <input type="text" id="str"> 
+         <button onclick="countWords()">Submit</button>
+           </p>
+       </table>
+    </body>
+</html>

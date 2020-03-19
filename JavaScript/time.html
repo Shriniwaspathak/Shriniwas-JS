@@ -1,0 +1,14 @@
+<button onclick="clearInterval(clock)">click me</button>
+<p id="showclock"></p>
+<script>
+    
+    var clock=setInterval(timming ,1000);
+    function timming(){
+
+   
+    var d=new Date();
+    var time=d.toLocaleTimeString();
+    document.getElementById('showclock').innerHTML=time;
+    // document.write(d);
+    }
+</script>

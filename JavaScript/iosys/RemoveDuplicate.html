@@ -1,0 +1,17 @@
+<script>
+    function removeDuplicate(){
+        var str=document.getElementById('str').value;
+        var str1='';
+    for(var i=0; i<str.length; i++){
+        if(str1.indexOf(str[i])-1){
+            str1 += str[i];
+        }
+    }
+    console.log(str1);
+       
+    }
+       
+    
+</script>
+<input type="text" id="str">
+<button onclick="removeDuplicate()"> click here</button>

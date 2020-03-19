@@ -1,0 +1,20 @@
+<script>
+  function bubbleSort(){
+      var num=document.getElementById('sort').value;
+      var arrayNum=num.toString(10).replace(/\D/g, '0').split('').map(Number);
+      console.log(arrayNum);
+      var temp;
+      for(var i=0;i<arrayNum.length;i++){
+          for(var j=i+1;j<arrayNum.length;j++){
+              if(arrayNum[i]>arrayNum[j]){
+                  temp=arrayNum[i];
+                    arrayNum[i]=arrayNum[j];
+                    arrayNum[j]=temp;
+              }
+          }
+      }
+      console.log(arrayNum);
+  }
+</script>
+<input type="text " id="sort">
+<button onclick="bubbleSort()">Click me</button>

@@ -1,0 +1,30 @@
+<html>
+    <body style="background-color: slategray;"></body>
+    <style>
+        .demo9{
+            background-image: url('img2.jpg');
+            background-size: contain;
+            position: relative;
+            opacity: inherit;
+        }
+    </style>
+   
+        
+    
+ <script>
+    function otpGen(){
+        var digit='0123456789';
+        var otp='';
+        for(var i=0;i<=6;i++){
+            otp+=digit[Math.floor(Math.random()*10)];
+        }
+       alert(otp);
+      
+    }
+    
+ </script>
+ <h1>Generate OTP</h1>
+ <button onload="otpGen()" id="1">Click</button>
+ <a href="validate.html"></a>
+
+</html>

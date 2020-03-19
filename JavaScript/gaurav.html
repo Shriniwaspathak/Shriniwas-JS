@@ -1,0 +1,35 @@
+
+      <script>
+        function fun(){
+          var result=[];
+          var name=document.getElementById('name').value;
+          var pass=document.getElementById('pass').value;
+          var email=document.getElementById('email').value;
+          var mob=document.getElementById('mob').value;
+          var gen=document.getElementById('gen').value;
+          var gen1=document.getElementById('gen').value;
+          var gen2=document.getElementById('gen').value;
+          var city=document.getElementById('city').value;
+          var add=document.getElementById('add').value;
+          
+           result+=name+pass+email+mob+gen+gen1+gen2+city+add;
+         // var array=["name","pass","email","mob","","gen","gen1","gen2","city","add"].innerHTML=result;
+          //var array=[name,pass,email,mob,gen,gen1,gen2,city,add].innerHTML=result;
+          console.log(result);
+        }
+
+      </script>
+      Name :  <input type="text" value="" id="name"><br><br>
+      Password : <input type="password" value="" id="pass"><br><br>
+      Email : <input type="email" value="" id="email"><br><br>
+      Mobile : <input type="text" value="" id="mob"><br><br>
+     Gender : <br><input type="radio" name="gender" value="male" id="gen"> Male<br>
+              <input type="radio" name="gender" value="female" id="gen"> Female<br>
+              <input type="radio" name="gender" value="other" id="gen"> Other<br><br>
+      City : <input type="text" id="city"><br><br>
+          Address <textarea name="" id="add" cols="30" rows="10"></textarea><br><br>
+       
+      <button onclick="fun()">Submit</button>
+
+     
+    

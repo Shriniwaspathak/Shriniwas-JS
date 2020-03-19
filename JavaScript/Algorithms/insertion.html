@@ -1,0 +1,20 @@
+<script>
+    function insertionSort(){
+        var num=document.getElementById('sort').value;
+        var arrayNum=num.toString(10).replace(/\D/g,'0').split('').map(Number);
+        console.log(arrayNum);
+        var temp ,j;
+        for(var i=1;i<arrayNum.length;i++){
+            temp=arrayNum[i];
+            j=i;
+            while( arrayNum[j-1]>temp && j>0){
+            arrayNum[j]=arrayNum[j-1];
+            j=j-1;
+            }
+            arrayNum[j]=temp;
+        }
+        document.write(arrayNum);
+    }
+</script>
+<input type="text" id="sort">
+<button onclick="insertionSort()">click me</button>

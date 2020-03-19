@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function guesss(){
+			console.log(localStorage.getItem('c'))
+			var x = localStorage.getItem('c');
+			var xarr= parseInt(x);
+			var arrnew = xarr.toString(10).replace(/\D/g, '0').split('').map(Number);
+			console.log()
+			
+			var y =document.getElementById('txtnumber').value;
+			var yarrr=parseInt(y);
+			
+			var arrrnew =yarrr.toString(10).replace(/\D/g, '0').split('').map(Number);
+			
+			console.log(arrrnew);
+
+			var count =0;
+			
+			for(var i =0;i<arrnew.length;i++){
+				
+				for(var j =0;j<arrrnew.length;j++){
+					
+					if(arrnew[i]==arrrnew[j]){
+						
+						console.log("Yes for " + i + "and" +j);
+						
+						arrrnew[j]=-3333333333;
+						count++;
+						break;
+					}
+				}
+					document.getElementById("result").innerHTML=count;
+			}
+		
+
+
+		}
+		function replay(){
+			window.location="file:///C:/Users/USER/Desktop/Game/game.html";
+		}
+		
+	</script>
+	<div>
+		<h1>Guess the number</h1>
+		<p id ="result"></p>
+		The number is <p id ="number"></p>
+		<input type="text" id="txtnumber"><br>	<br>	
+		<input type="button" value ="guess" onclick="guesss()">
+		<input type="button" value ="replaygame" onclick="replay()">
+	</div>
+	
+</body>
+</html>

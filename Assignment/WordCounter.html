@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>word counter</title>
+    </head>
+    <body>
+       <script>
+           var counts={};
+           var keys=[];
+           var newArray=[];
+           function countWords(){
+               let Sentence=document.getElementById('str').value;  
+               let tokens=Sentence.split(/\W+/);
+              // console.log(tokens);
+               for(let i=0;i<tokens.length;i++){
+                   var word=tokens[i].toLowerCase();
+                   if(counts[word]===undefined){
+                       counts[word]=1;
+                       keys.push(word);
+                   }else{
+                       counts[word]=counts[word]+1;       
+                   }
+               }
+           keys.sort(compare);
+           function compare(a,b){
+               let countA=counts[a];
+               let countB=counts[b]
+               return countA-countB;
+           }
+           for(let i=0;i<keys.length;i++){
+                let key=keys[i];
+               newArray.push("Occurance of "+keys[i]+" = "+ counts[key]+'<br>');   
+           } 
+           console.log(newArray);
+           document.getElementById('txt').innerHTML= newArray;
+        }     
+       </script>
+       <table>
+           
+           <div class="input">
+            <h3>Words Counter</h3>
+            <div class="sentence">
+           <p> 
+         Enter Sentence  <input type="text" id="str"> <br>
+         <span id="txt"></span>
+        </p>
+         </div>
+         <button onclick="countWords()">Submit</button>
+         </div>
+       </table>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <body style="background-color: lightslategrey;">
+        
+   
+<script>
+    
+    function generateNumber(){
+
+        var number=Math.floor(100000+Math.random()*900000);
+      
+        var storeNum =localStorage.setItem("number",number);
+       
+       document.getElementById('num').innerHTML=number;
+       
+    var count =5;
+			setInterval(function(){
+				count--;
+				document.getElementById('countdown').innerHTML="Count down "+count+"sec";
+				if(count ==0){
+					window.location="C:\\Users\\Shriniwas Pathak\\Desktop\\MemoryGame\\game.html";
+				}
+			},1000);
+        }
+    
+</script>
+ <div style="padding: 10px; background-color: slategrey ; margin: auto; border: 3px; width: 60%; ">
+<h1>Click Here To Generate Number !</h1>
+
+<button onclick="generateNumber()">Click me</button>
+<p id="num"></p>
+<p id="countdown"></p>
+</div>
+</html>

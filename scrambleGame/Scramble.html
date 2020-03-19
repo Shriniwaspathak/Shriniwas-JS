@@ -1,0 +1,72 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header>
+            <h1>Guess the word game </h1>
+        </header>
+        <section>
+        <div class="gameArea">
+            <h3 class="msg"></h3>
+            <input type="text" class="hidden"> 
+            <button class="btn">Click here to start</button>
+
+        </div>
+        </section>
+        <script>
+            const msg=document.querySelector('.msg');
+            const guess=document.querySelector('input');
+            const btn=document.querySelector('.btn');
+            let play=false;
+            let newWords="";
+            let randomWords="";
+            let words=['java','javascript','cource','india','sql','html','guess','skills',
+                           'php','gourav','rishu','from','leaders','laptop','technology','job'];
+            const createNewWords=()=>{
+                let random=Math.floor(Math.random()*words.length);
+                let newTempWords=words[random];
+               // console.log(newTempWords);
+                return newTempWords;
+            }
+              const scrambleWords=(arr)=>{
+                  for(let i=arr.length;i>=0;i--){
+                      let temp=arr[i];
+                     // console.log(temp);
+                      let j=Math.floor(Math.random()*(i+1));
+                    //  console.log(i);
+                     // console.log(j);
+                      arr[i]=arr[j];
+                      arr[j]=temp;
+                  }
+                  return arr;
+              }
+
+            btn.addEventListener('click',function(){
+                if(!play){
+                    play=true;
+                    btn.innerHTML="Guess";
+                    guess.classList.toggle('hidden');
+                    newWords=createNewWords();
+                    randomWords=scrambleWords(newWords.split("").join(""));
+                    msg.innerHTML=randomWords; 
+                }else{
+                    let tempWord=guess.value;
+                    if(tempWord===newWords){
+                        play=false;
+                        msg.innerHTM=`Awesome it's correct. it is  ${newWords}`;
+                        btn.innerHTML="Start Again !";
+                        guess.classList.toggle('hidden');
+                    }else{
+                       msg.innerHTML=`Sorry ! It is not correct. plz try again ${randomWords}`;
+                    }
+                }
+            })
+
+
+        </script>
+    </body>
+</html>

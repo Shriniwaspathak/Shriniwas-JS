@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#firstid{
+    color:chartreuse;
+}
+.firstclass{
+    color: darkblue;
+}
+.backimg{
+    width: 100%;
+    height: 100vh;
+  /*  background-color: darkred;*/
+    background-image: url('img2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.backimg1{
+    width: 100%;
+    height: 100vh;
+  /*  background-color: darkred;*/
+    background-image: url('img3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#front{
+    font-family: 'Concert One', cursive;
+    font-variant: small-caps;
+}

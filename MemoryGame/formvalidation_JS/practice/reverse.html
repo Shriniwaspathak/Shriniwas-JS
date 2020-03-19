@@ -1,0 +1,17 @@
+<script>
+    function fun(){
+      //  var text=document.getElementById('one').value;
+      
+        alert(text);
+        var str="";
+       for(var i=0;i<text.length;i++){
+           str=text.subString(i,i+1)+str;
+           console.log(str);
+         document.getElementById('one1')=str;
+       }
+    }
+</script>
+<input type="text" id="one" >
+<br><br>
+<input type="text" id=" one1" >
+<button onclick="fun()" >click me

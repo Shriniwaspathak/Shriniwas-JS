@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    line-height: 15vh;
+    background-color: rgb(197, 170, 120);
+}
+h1{
+    text-align: center;
+    color: rgba(73, 71, 41, 0.801);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    letter-spacing: 15px;
+    text-shadow: 0 1px 0 rgb(106, 151, 168),
+                 0 2px 0 rgb(106, 151, 168), 
+                 0 3px 0 rgb(106, 151, 168),
+                 0 4px 0 rgb(106, 151, 168),
+                 0 30px 5px rgba(0, 0,0,.1);
+}
+section{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 204, 164);
+}
+.gameArea{
+    width: 50%;
+    height: 400px;
+    padding: 20px;
+    background-color:  rgb(197, 170, 120);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 8px 6px -6px black;
+}
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+}
+input{
+    width: 40%;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color:  rgb(226, 204, 164);
+    color: black;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+button{
+    font-size: 1rem;
+    cursor: pointer;
+    outline:none;
+    border:cornflowerblue;
+    text-decoration: none;
+    margin-top: 10px;
+    color:#4b3928b4;
+}
+button.btn{
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background: cornsilk;
+    text-transform: uppercase;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    
+}
+button.btn:hover, button.btn:focus, button.btn:active {
+   letter-spacing: 0.125rem;
+   word-spacing: 0.2rem;
+}
+.hidden{
+    display: none;
+}

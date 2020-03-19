@@ -1,0 +1,12 @@
+<script>
+    function fun(){
+        var sentence=" my name is rishu pathak I am from marse"
+        var str=document.getElementById('srch').value;
+        // var n=sentence.search("rishu");
+        var n=sentence.replace("rishu",str);
+        console.log(n);
+    }
+
+</script>
+<input type="text" id="srch">
+<button onclick="fun()">click</button>

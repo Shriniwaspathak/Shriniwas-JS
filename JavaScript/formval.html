@@ -1,0 +1,33 @@
+<script>
+    function validation(){
+        var username=document.getElementById("uname");
+        var password=document.getElementById("pass");
+        if(username.value.trim()==""){
+           // alert("fill in the blank");
+            uname.style.border="solid 3px red";
+            docoment.getElementById("lbluser")
+            .style.visibility="visible";
+            return false;
+        }else if (password.value.trim()==""){
+            alert("fill in the blank");
+            return false;
+        }
+        else if (password.value.trim().length<5){
+            alert("Password is too short");
+            return false;
+    }    else{
+        return true;
+    }
+    }
+</script>
+<form onsubmit=" return validation();" action="messege.html" >
+
+    <input  id="uname" placeholder="UserName"
+     type="text" />
+     <label id="lbluser" style="color: red;visibility: hidden;">Invalid</label>
+     <br><br>
+     <input id="pass" placeholder="Password"
+     type="password" /><br><br>
+     <br><br>
+     <button  type="submit">Submit</button>
+</form>
