@@ -1,0 +1,18 @@
+<script>
+    function rotationArray(arr,rotation){
+       const rotateArray=arr.concat();
+       let result=0;
+       for(let i=0;i<rotation;i++){
+       const frontItem=rotateArray.shift();
+       rotateArray.push(frontItem);
+    }
+        console.log(rotateArray);
+        result=rotateArray.join(' ');
+        console.log(result);
+       return result;
+    }
+    const rotation=4;
+    const arr=[1,2,3,4,5];
+    rotationArray(arr,rotation);
+    
+</script>

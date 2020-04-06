@@ -1,0 +1,18 @@
+<script>
+ function matchingArray(strings,query){
+        const length={};
+        for(let String of strings) length[String]=(length[String] || 0 )+1;
+   
+        let result= query.map(queries=>length[queries]||0);
+
+        console.log(query.map(queries=>length[queries]||0));
+        return result;
+      
+ }
+
+
+    var strings=['gerggu','fwefefiu','jfbweg','nfewou','qwert','qwert','nfewou','fwefefiu'];
+    var query=['fwefefiu','qwert','nfewou'];
+    matchingArray(strings,query);
+ 
+</script>

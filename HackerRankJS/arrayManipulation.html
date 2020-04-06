@@ -1,0 +1,34 @@
+<script>
+
+function arrayManipulation(sizeOfAray,queries){
+    const arr=Array(sizeOfAray);
+    console.log(arr);
+    let maxValue=0;
+    queries.forEach(([ ,end,value]) => {
+        arr[start]=arr[start]||{start:0,end:0};
+        arr[end]=arr[end]||{start:0,end:0};
+
+        arr[start].star +=value;
+        arr[end].end += value;
+        
+    });
+    let currentNumber=0;
+    arr.forEach((num)=>{
+        if(num){
+            currentNumber+=num.start;
+            if(currentNumber>maxValue){
+                maxValue=currentNumber;
+            }
+            currentNumber-=num.end;
+        }
+    }
+    );
+    return maxValue;
+}
+
+
+
+
+
+
+</script>
