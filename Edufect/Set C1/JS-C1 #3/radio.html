@@ -1,0 +1,52 @@
+<html>
+    <head></head>
+    <body>
+        What do you know best <br>
+        <input type="radio" id="r1" value="JS" name="tech">JavaScript</input><br>
+        <input type="radio" id="r2" value="AN" name="tech">Angular</input><br>
+        <input type="radio" id="r3" value="RT" name="tech">React</input><br>
+        <button onclick="show()">Show</button><br>
+    </body>
+    <script>
+        // let x=document.getElementById('r3');
+        // x.checked=true;
+        addRadio();
+        function show(){
+            let rvalue='';
+            let t1=document.getElementById('r1').checked;
+            if(t1)
+            rvalue=document.getElementById('r1').value;
+
+            let t2=document.getElementById('r2').checked;
+            if(t2)
+            rvalue=document.getElementById('r2').value;
+
+            let t3=document.getElementById('r3').checked;
+            if(t3)
+            rvalue=document.getElementById('r3').value;
+            console.log(t1,t2,t3,rvalue);
+        }
+        function addRadio(){
+            let radio1=document.createElement('input');
+            radio1.type='radio';
+            radio1.setAttribute('id','rd1');
+            radio1.setAttribute('name','gender');
+            radio1.value='Male';
+            document.body.appendChild(radio1);
+            let txt=document.createTextNode("Male");
+            document.body.appendChild(txt);
+
+            let br=document.createElement("br");
+            document.body.appendChild(br);
+
+            let radio2=document.createElement('input');
+            radio2.type='radio';
+            radio2.setAttribute('id','rd2');
+            radio2.setAttribute('name','gender');
+            radio2.value='Female';
+            document.body.appendChild(radio2);
+            let txt1=document.createTextNode("Female");
+            document.body.appendChild(txt1);
+        }
+    </script>
+</html>

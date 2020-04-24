@@ -1,0 +1,17 @@
+<script>
+    let arr=[{"fname":"Jack","lname":"Smith","city":"London"},{"fname":"Mary","lname":"Markle","city":"London"}
+    ,{"fname":"Ed","lname":"May","city":"Paris"},{"fname":"Tim","lname":"Gates","city":"Rome"}]
+
+    let c=0;
+    let count=arr.reduce((acc,curr)=>funDept(acc,curr));
+    console.log(count);
+    function funDept(acc,curr){
+        if(curr.city==='London'){
+                  c++;
+                return  c++;
+               } else{
+              return c;
+               }
+           }
+    
+</script>

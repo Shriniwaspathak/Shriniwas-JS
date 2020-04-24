@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+    
+</body>
+
+
+
+<script>
+    let arr=[{"id" : 101, "name" : "Mark"},{"id": 105, "name" : "Steve"},{"id" : 78, "name" : "James"}];
+    let x=arr.map(fun);
+    var y=x.join('')
+    console.log(y);
+
+    let element=document.createElement('div');
+    element.innerHTML=y;
+    console.log(element);
+   document.body.appendChild(element);
+
+
+    function fun(p){
+        return "<button onclick=clicked("+p.id+")>"+p.name+"</button>";
+    }
+   
+</script>
+</html>

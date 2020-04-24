@@ -1,0 +1,12 @@
+<script>
+    let names=[{"name":"Mary"},{"name":"Anita"},{"name":"Edward"},{"name":"Thomas"},{"name":"Robin"},{"name":"Sophia"},{"name":"Bruce"}];
+         let str='Mary';
+         let x2=names.find(n=>fun(n,str));
+        let y2=names.findIndex(n=>fun(n,str));
+           if(str==x2.name){
+               console.log(x2.name+' is at index '+y2);
+           }
+           function fun(n,str){
+               return n.name===str;
+           }
+</script>

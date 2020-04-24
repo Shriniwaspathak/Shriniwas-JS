@@ -1,0 +1,44 @@
+<script>
+     let arr=[{"name":"Jack","country":"USA","age":35},
+    {"name":"Amit","country":"India","age":38},
+    {"name":"Edward","country":"USA","age":41},
+    {"name":"Vishal","country":"India","age":30},
+    {"name":"Annie","country":"USA","age":27},
+     {"name":"Nick","country":"France","age":32},
+    {"name":"Francis","country":"France","age":44},
+    {"name":"Preeti","country":"India","age":25},
+    {"name":"Sophie","country":"France","age":29},
+    {"name":"Harpreet","country":"India","age":48},
+      {"name":"Bob","country":"USA","age":21}];
+      arr.sort(compare1);
+  arr.sort(compare);
+  console.log(JSON.stringify(arr));
+
+  function compare1(per1,per2){
+    name1=per1.country;
+       name2=per2.country;
+       if(name1>name2){
+            return 1;
+        }
+        if(name1==name2){
+            return 0;
+        }
+        if(name1<name2){
+            return -1;
+        }
+  }
+  
+  function compare(per1,per2){
+    name1=per1.age;
+       name2=per2.age;
+       if(name1>name2){
+            return -1;
+        }
+        if(name1==name2){
+            return 0;
+        }
+        if(name1<name2){
+            return 1;
+        }
+  }
+</script>

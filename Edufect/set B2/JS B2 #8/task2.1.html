@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        Course Name : <input type="text" id="course"><br>
+        <button onclick="remove()">Remove</button>
+    </body>
+<script>
+    var arr=['javascript','java','Python','c++','react'];
+    let len=arr.length;
+    function remove(){
+    for(let i=0;i<len;i++){
+        let course=document.getElementById("course").value;
+            if(course==arr[i]){  
+               break;
+            }
+            else if(i==len-1){  
+            arr.push(course);
+            }      
+    }
+    console.log(arr);
+    }
+</script>
+</html>

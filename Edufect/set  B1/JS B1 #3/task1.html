@@ -1,0 +1,25 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="txt"><br>
+        <input type="text" id="txt1"><br>
+
+        <button onclick="gettext()">Get Text</button>
+    </body>
+    <script>
+        function gettext(){
+            let inputfield1=document.getElementById('txt');
+            let inputvalue=inputfield1.value;
+
+            let inputfield2=document.getElementById('txt1');
+            let inputvalue1=inputfield2.value;
+
+            let concatInput=inputvalue+" "+inputvalue1;
+            console.log(concatInput);
+            let ele=document.createElement('div');
+            ele.innerHTML=concatInput;
+            document.body.appendChild(ele);    
+        }
+    </script>
+</html>

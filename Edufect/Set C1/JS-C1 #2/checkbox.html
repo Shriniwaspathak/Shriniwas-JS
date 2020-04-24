@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+    <body>
+        What do you know <br>
+        <input type="checkbox" id="cb1">JavaScript</input> <br>
+        <input type="checkbox" id="cb2">Angular</input><br>
+        <input type="checkbox" id="cb3" checked>React</input><br>
+        <button onclick="showChecked()">Show Checked</button><br>
+    </body>
+       <script>
+           addbox();
+            // let ch=document.getElementById('cb2');
+            //          ch.checked=true;
+           function showChecked(){
+               let tech=document.getElementById('cb1').checked;
+               console.log(tech);
+               let tech1=document.getElementById('cb2').checked;
+               console.log(tech1);
+
+               let tech2=document.getElementById('cb3').checked;
+               console.log(tech2);
+           }
+           function addbox(){
+              let myCB=document.createElement('input');
+               myCB.type='checkbox';
+               myCB.setAttribute('id','mycb');
+               document.body.appendChild(myCB);
+               let text=document.createTextNode("Do you know JavaScript");
+               document.body.appendChild(text);
+               let br=document.createElement('br');
+               document.body.appendChild(br);
+           }
+       </script>
+</html>

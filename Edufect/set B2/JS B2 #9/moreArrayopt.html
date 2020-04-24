@@ -1,0 +1,90 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="moreArrayopt.css">
+    </head>
+    <body>
+        Name : <input type="text" id="name"><br>
+        Quantity: <input type="text" id ="qunt"><br>
+        <button onclick="add()" id="btn1">Add</button>
+        <div id="product"></div>
+    </body>
+    <script>
+        let prod1={'name':'maggie','quantity':20};
+        let prod2={'name':'perk','quantity':25};
+        let prod3={'name':'5 star','quantity':50};
+        let prod4={'name':'gems','quantity':26};
+        let prod5={'name':'kitkat','quantity':80};
+        let products=[prod1,prod2,prod3,prod4,prod5];
+        showProduct();
+
+        function getIndex(name1){
+            let len=products.length;
+            let index=-1;
+            for(let i=0;i<len;i++)
+                if(products[i].name===name1){
+                    index=i;   
+            }
+            return index;
+        }
+        function add(){
+            let name1=document.getElementById('name');
+            let qualty1=document.getElementById('qunt');
+            let prod={'name':name1.value,'quantity':qualty1.value};
+            if(getIndex(name1.value)<0){
+                products.push(prod);
+            }else{
+                alert("Product already exists")
+            }
+            name1.value="";
+            qualty1.value='';
+           
+            showProduct();
+        }
+        function remove(index){
+            console.log("remove index is ",index);
+            products.splice(index,1);
+            showProduct();
+        }
+        function edit(index){
+            console.log("edit index is ",index);
+            let prod=products[index];
+            let name1=document.getElementById('name');
+            let qualty1=document.getElementById('qunt');
+            name1.value=prod.name;
+            qualty1.value=prod.quantity;
+            let btn1=document.getElementById('btn1');
+            btn1.innerText="Update";
+            btn1.setAttribute('onclick','editProduct(+'+index+')');
+        }
+        function editProduct(index){
+            let name1=document.getElementById('name');
+            let qualty1=document.getElementById('qunt');
+            let prod={'name':name1.value,'quantity':qualty1.value};
+            name1.value="";
+            qualty1.value='';
+            products[index]=prod;
+            let btn1=document.getElementById('btn1');
+            btn1.innerText="Add";
+            btn1.setAttribute('onclick','add()');
+            showProduct();
+        }
+
+         function showProduct(){
+             let len=products.length;
+             let str='';
+             for(let i=0;i<len;i++){
+                 let pr=products[i];
+                 let name1='<div class="cell">'+pr.name+'</div>';
+                 let quantity1='<div class="cell1">'+pr.quantity+'</div>';
+                 let btn1='<div class="cell1"><button onclick=remove('+i+')>Remove</button></div>';
+                 let btn2='<div class="cell1"><button onclick=edit('+i+')>Edit</button></div>';
+                 
+                 let row='<div>'+name1+quantity1+btn1+btn2+'</div>';
+                 str+=row;
+             }
+             let table=document.getElementById('product');
+             table.innerHTML=str;
+         }
+    </script>
+
+</html>

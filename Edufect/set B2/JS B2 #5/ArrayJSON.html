@@ -1,0 +1,29 @@
+<html>
+    <head>
+   <link rel="stylesheet" href="arrayjson.css">
+    </head>
+    <body>
+    </body>
+    <script>
+        let p1={'name':'Jack','age':20,"city":'london','technology':'Javascript'};
+        let p2={'name':'James','age':22,"city":'NewYork','technology':'Angular'};
+        let p3={'name':'BOB','age':29,"city":'Delhi','technology':'React'};
+        let p4={'name':'Steve','age':25,"city":'Bangalore','technology':'Java'};
+        let persons=[p1,p2,p3,p4];
+        console.log(persons);
+        let str='';
+        for(let i=0;i<persons.length;i++){
+            let person=persons[i];
+            let name1='<div class="cell" >'+person.name+'</div>';
+            let age1='<div class="cell1" >'+person.age+'</div>';
+            let city1='<div class="cell" >'+person.city+'</div>';
+            let tech1='<div class="cell" >'+person.technology+'</div>';
+            let row='<div>'+name1+age1+city1+tech1+'</div>';
+            str+=row;
+        }
+        console.log(str);
+        let element=document.createElement('div');
+        element.innerHTML=str;
+        document.body.appendChild(element);
+    </script>
+</html>

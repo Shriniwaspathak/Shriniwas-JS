@@ -1,0 +1,15 @@
+<script>
+    let n=6;
+    let str='';
+    let value=0;
+    for(let i=1;i<=n;i++){
+         if(i%2==0){
+             str +='+'+i;
+             value += +i;
+         }else{
+            str +='-'+i;
+            value += -i;
+         }
+    }
+    console.log(str +"="+ value);   
+</script>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="chngeStyle.css">
+    </head>
+    <body>
+        <button class="btn" onclick="Green()">Green</button>
+    <br><br>    
+        <button class ="btn"onclick="blue()">Blue</button>
+        <br>
+        <div id="textmsg"></div>
+    </body>
+    <script>
+     function Green(){
+         let ele =document.getElementById('textmsg');
+         ele.innerHTML="My style is Green";
+        ele.className="txtgreen"
+     }
+     function blue(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="My style is Blue";
+        ele.className="txtblue"
+     }
+    </script>
+</html>

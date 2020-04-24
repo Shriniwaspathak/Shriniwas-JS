@@ -1,0 +1,15 @@
+<script>
+    let arr=[4,8,12,20,6];
+    let x=5;
+    let arr1=arr.filter(n=>filterMult5(n,x));
+    console.log(arr1);
+
+    function filterMult5(n,x){
+        let rem=n%x;
+        if(rem!=0)
+        return true;
+        else
+        return false;
+    }
+   
+</script>

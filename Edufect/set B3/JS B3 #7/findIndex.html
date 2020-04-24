@@ -1,0 +1,38 @@
+<script>
+    let numbers=[25,8,15,4,50,9,100,10];
+    let people=['james','steve','martha','patric','kathy'];
+    let emps=[{'name':'james','age':25,'dept':'finance'},
+               {'name':'steve','age':23,'dept':'tech'},
+               {'name':'martha','age':30,'dept':'ops'},
+               {'name':'patric','age':82,'dept':'finance'},
+               {'name':'kathy','age':56,'dept':'tech'}];
+               console.log(numbers);
+               let x1=numbers.find(fn1);
+               console.log(x1);
+               let y1=numbers.findIndex(fn1);
+               console.log(y1);
+
+               console.log(people);
+               let ch='m';
+               let x=people.find(p=>pstart(p,ch));
+               console.log(x);
+               let y=people.findIndex(p=>pstart(p,ch));
+               console.log(y);
+
+               console.log(emps);
+               let ch1='p';
+               let x2=emps.find(e=>pstartK(e,ch1));
+               console.log(x2);
+               let y2=emps.findIndex(e=>pstartK(e,ch1));
+               console.log(y2);
+
+               function fn1(n){
+                   return n%3===0;
+               }
+               function pstart(p,ch){
+                   return p.charAt(0)===ch;
+               }
+               function pstartK(e,ch1){
+                  return e.name.charAt(0)===ch1;
+               }
+</script>

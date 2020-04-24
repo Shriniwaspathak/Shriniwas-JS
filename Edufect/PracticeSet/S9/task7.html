@@ -1,0 +1,30 @@
+<script>
+   arr=["c101","mB24x","a4b6n7","zzz2z"];
+    arr.sort(compareNumber);
+    console.log(arr);
+   function compareNumber(str1,str2){
+        let len1=str1.length;
+        let len2=str2.length;
+        let n3=0;
+        let n4=0;
+        for(let i=0;i<len1;i++){
+            if(str1.charAt(i)!=isNaN){
+                n3=n3+str1.charAt(i);
+            }
+        }
+        for(let i=0;i< len2;i++){
+            if(str2.charAt(i)!=isNaN){
+                n4=n4+str2.charAt(i);
+            }
+        }
+       if( n3< n4){
+          return 1;
+         } 
+         if(n3== n4){
+          return 0;
+      } 
+      if(n3>n4){
+          return -1;
+      }
+   }
+</script>

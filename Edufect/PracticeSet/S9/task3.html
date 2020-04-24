@@ -1,0 +1,21 @@
+<script>
+    let arr=['Edufect','Java','Master'];
+    arr.sort(compareString);
+    console.log(arr);
+    
+    function compareString(str1,str2){
+        len1=str1.length;
+        len2=str2.length
+        var lastChar1 = str1.charAt(len1-1);
+        var lastChar2 = str2.charAt(len2-1);
+        if(lastChar1>lastChar2){
+          return 1;
+         } 
+         if(lastChar1==lastChar2){
+          return 0;
+         } 
+      if(lastChar1<lastChar2){
+          return -1;
+      }
+    }
+</script>

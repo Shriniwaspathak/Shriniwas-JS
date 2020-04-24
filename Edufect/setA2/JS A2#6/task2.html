@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="addXY()">Add X or Y</button><br>
+    </body>
+    <script>
+       var x='X';
+        function addXY(){
+            let ele=document.createElement("div");
+            ele.innerHTML=x;
+            document.body.appendChild(ele);
+            x +='Y'; 
+        }
+    </script>
+</html>

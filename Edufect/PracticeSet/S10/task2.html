@@ -1,0 +1,16 @@
+<script>
+     let arr=['aa','car','is','going'];
+     let arr1=arr.filter(str=>strFilter(str));
+     arr1.reverse();
+     console.log(arr1);
+   function strFilter(str){
+     for(let i=0;i<str.length;i++){
+                let ch=str.charAt(i);
+                if(ch=='a' || ch=='b'|| ch=='c')
+                     return true;
+                else
+                return false;        
+     }
+     }
+   
+</script>

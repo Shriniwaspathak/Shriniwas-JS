@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task1.2.css">
+    </head>
+    <body>
+        <button class="btn" onclick="fun1()">JavaScript</button><br>  <br>
+        <button class="btn" onclick="fun2()">React</button>
+        <br><br>
+        <button class="btn" onclick="fun3()">Angular</button>
+        <br><br>
+        <button class="btn1" onclick="func4()">Reset</button>
+<br>
+        <div id="textmsg"></div>
+    </body>
+    <script>
+     function fun1(){
+         let ele =document.getElementById('textmsg');
+         ele.innerHTML="JavaScript is the centre of all web apps";
+     }
+     function fun2(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="React is a liabrary developed by Facebook";
+     }
+     function fun3(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="Angular is a framework supported by Google";
+     }
+     function func4(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="";
+     }
+    </script>
+</html>

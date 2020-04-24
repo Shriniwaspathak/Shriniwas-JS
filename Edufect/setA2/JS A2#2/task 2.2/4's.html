@@ -1,0 +1,27 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="4'style.css">
+    </head>
+    <body> 
+    </body>
+    <script>
+        let i=1;
+    document.write("<table class='mytable'>");
+        document.write("<tr class='myheader'>"); 
+        document.write("<td>Number</td>");
+        document.write("<td>Remainder</td>");
+        document.write("</tr>");
+          for(i=1;i<=12;i++){
+              let rem4=i%4;
+              if(rem4==0){
+                document.write("<tr class='multi4'>");
+              }else{
+                document.write("<tr class='notmulti4'>");
+              }
+        document.write("<td>",i,"</td>");
+        document.write("<td>",rem4,"</td>");
+        document.write("</tr>");
+          }
+    document.write("</table>");
+    </script>
+</html>

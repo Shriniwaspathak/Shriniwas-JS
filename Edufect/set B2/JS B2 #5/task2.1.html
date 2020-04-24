@@ -1,0 +1,40 @@
+<html>
+    <head>
+   <link rel="stylesheet" href="task2.1.css">
+    </head>
+    <body>
+    </body>
+    <script>
+        document.write('<div class="header">'+'Name'+'</div>');
+        document.write('<div class="header">'+'Math'+'</div>');
+        document.write('<div class="header">'+'English'+'</div>');
+        document.write('<div class="header">'+'Science'+'</div>');
+        document.write('<div class="header">'+'Total'+'</div>');
+
+        let s1={'Name':'Mark','Math':80,"English":75,'Science':63};
+        let s2={'Name':'Bob','Math':90,"English":81,'Science':88};
+        let s3={'Name':'Juliya','Math':60,"English":64,'Science':61};
+            s1['total']=s1.Math+s1.English+s1.Science;
+            s2['total']=s2.Math+s2.English+s2.Science;
+            s3['total']=s3.Math+s3.English+s3.Science;
+        let students=[s1,s2,s3];
+        let str='';  
+        for(let i=0;i<students.length;i++){
+            let Student=students[i];
+            if(Student.total>=225){
+              Student.Name +=' a*';
+            }
+             let name1='<div class="cell" >'+Student.Name+'</div>';
+            let maths='<div class="cell" >'+Student.Math+'</div>';
+            let English1='<div class="cell" >'+Student.English+'</div>';
+            let science1='<div class="cell" >'+Student.Science+'</div>';
+            let total1='<div class="cell" >'+Student.total+'</div>';
+            let row='<div>'+name1+maths+English1+science1+total1+'</div>';
+            str+=row;
+        }
+        console.log(str);
+        let element=document.createElement('div');
+        element.innerHTML=str;
+        document.body.appendChild(element);
+    </script>
+</html>

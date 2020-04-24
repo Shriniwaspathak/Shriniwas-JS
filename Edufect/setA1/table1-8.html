@@ -1,0 +1,28 @@
+<script>
+     const j=1;
+    const num1=10;
+
+    document.write("<table>");
+        document.write("<tr>"); 
+        document.write("<td></td>");
+        document.write("<td></td>");
+        document.write("<td></td>");
+        document.write("<td></td>");
+        document.write("</tr>");
+          
+          for(let i=1;i<=8;i++){
+              let value1=i+num1;
+               let num2=value1%10;
+                 let num3=num1*num1;
+              let value2=num3+i;
+              let value3=num3*num1+i;
+
+        document.write("<tr>"); 
+        document.write("<td>",i,"</td>");
+        document.write("<td>",value1,"</td>");
+         document.write("<td>",value2,"</td>");
+         document.write("<td>",value3,"</td>");
+        document.write("</tr>");
+          }
+    document.write("</table>");
+</script>

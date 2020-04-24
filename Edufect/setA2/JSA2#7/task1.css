@@ -1,0 +1,23 @@
+.div1{
+    margin: 20px;
+    padding: 20px;
+    background-color:gray;
+    color: white;
+    border: 5px solid pink;
+   
+}
+.div2{
+    margin: 40px;
+    padding: 10px;
+    background-color:gray;
+    color: white;
+    border: 10px solid pink;
+}
+.div3{
+    margin: 10px;
+    padding: 40px;
+    background-color:gray;
+    color: white;
+    border: 20px solid pink;
+   
+}

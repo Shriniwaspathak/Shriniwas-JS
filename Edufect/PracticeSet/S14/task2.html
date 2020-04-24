@@ -1,0 +1,15 @@
+<script>
+    let arr=[{"fname":"Jack","lname":"Smith","city":"London"},{"fname":"Mary","lname":"Markle","city":"London"}
+    ,{"fname":"Ed","lname":"May","city":"Paris"},{"fname":"Tim","lname":"Gates","city":"Rome"}]
+
+    let p=arr.reduce((acc,curr)=>funDept(acc,curr));
+    console.log(p.city);
+    function funDept(acc,curr){
+        if(curr.fname==='Ed'){
+                return curr;
+               }else{
+                   return acc;
+               }
+           }
+    
+</script>

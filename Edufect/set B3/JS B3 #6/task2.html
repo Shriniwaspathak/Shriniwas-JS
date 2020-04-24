@@ -1,0 +1,67 @@
+<html>
+    <head>
+   <link rel="stylesheet" href="task2.css">
+    </head>
+    <body>
+        New Weight between ::<input type="text" id="txt1">
+              <input type="text" id="txt2">
+              <button onclick="weight()">Filter</button>
+              <div id=table></div>
+    </body>
+    <script>
+         let person=[{"name":"Jack","oldwt":65,"newwt":68},
+                    {"name":"Mary","oldwt":55,"newwt":53},
+                    {"name":"Bob","oldwt":71,"newwt":66},
+                    {"name":"Steve","oldwt":62,"newwt":68},
+                    {"name":"James","oldwt":81,"newwt":77},
+                    {"name":"Julia","oldwt":52,"newwt":52},
+                    {"name":"Micheal","oldwt":68,"newwt":68},
+                    {"name":"Bill","oldwt":60,"newwt":61},
+                    {"name":"Sonny","oldwt":61,"newwt":60}];
+                    showTable(person);
+
+                    function weight(){
+                        let arr=person.filter(p=>WeightFilter(p));
+                        showTable(arr);
+                    }
+                    function WeightFilter(p){
+                        let newWeight=document.getElementById('txt1').value;
+                        let oldWeight=document.getElementById('txt2').value;
+                        let newWeight2= +newWeight;
+                        let oldWeight2= +oldWeight;
+                     if(p.oldwt>=newWeight2 && p.oldwt<=oldWeight2 && p.newwt>=newWeight2 && p.newwt<=oldWeight2)
+                            return true;
+                            else
+                            return false;
+                    }
+
+            function showTable(person){
+                  let len=person.length;
+                 let str='';
+                 str+='<div><div class="cell1">Name</div>';
+                    str+='<div class="cell1">Old Weight</div>';
+                    str+='<div class="cell1">New Weight</div></div>';
+             for(let i=0;i<len;i++){
+                 let pr=person[i];
+                 if(pr.newwt>pr.oldwt){
+                    var name1='<div class="cell">'+pr.name+'</div>';
+                    var Oldweight1='<div class="cell">'+pr.oldwt+'</div>';
+                    var Newweight1='<div class="cell">'+pr.newwt+'</div>';
+                 }else if(pr.newwt<pr.oldwt){
+                    var name1='<div class="cell2">'+pr.name+'</div>';
+                    var Oldweight1='<div class="cell2">'+pr.oldwt+'</div>';
+                    var Newweight1='<div class="cell2">'+pr.newwt+'</div>';
+                 }else{
+                    var name1='<div class="cell3">'+pr.name+'</div>';
+                    var Oldweight1='<div class="cell3">'+pr.oldwt+'</div>';
+                    var Newweight1='<div class="cell3">'+pr.newwt+'</div>';
+                 }
+                 let row='<div>'+name1+Oldweight1+Newweight1+'</div>';
+                 str+=row;
+             }
+             let table=document.getElementById('table');
+             table.innerHTML=str;
+             document.body.appendChild(table);
+                }
+    </script>
+</html>

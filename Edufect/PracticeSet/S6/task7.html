@@ -1,0 +1,17 @@
+<script>
+    let str='ABCDEF';
+     let str1='';
+     for(let i=0;i<=str.length;i++){
+         let ch=str.charAt(i);
+         if(ch=='A'){
+             str1+='B';
+         }else if(ch=='B'){
+             str1+='A';
+         }else if(ch=='C' || ch=="D"){
+             str1+='';
+         }else{
+             str1+=ch;
+         }
+     }
+     console.log(str1);
+</script>

@@ -1,0 +1,132 @@
+<html>
+<head>
+  <link rel="stylesheet" href="JS-AN-A2_SEC-C_TASK.css">
+</head>
+  <body>
+     Product Name:<input type="text" id="name"></br>
+     Sales in 2015:<input type="text" id="sale1"></br>
+     Sales in 2016:<input type="text" id="sale2"></br>
+     Sales in 2017:<input type="text" id="sale3"></br>
+     Sales in 2018:<input type="text" id="sale4"></br>
+   <button id="bt" onclick="add()">Add Product</button>
+  <div id="prsn"></div>
+</body>
+  <script>
+       let p1={name: "CK724R", s2015: 01, s2016: 23, s2017: 76, s2018: 15};
+       let p2={name: "MX206N", s2015: 81, s2016: 10, s2017: 66, s2018: 60};
+       let p3={name: "AH224T", s2015: 29, s2016: 50, s2017: 98, s2018: 89};
+       let p4={name: "PB155D", s2015: 39, s2016: 54, s2017: 37, s2018: 30};
+       let p5={name: "BD110N", s2015: 18, s2016: 22, s2017: 41, s2018: 67};
+       let person=[p1,p2,p3,p4,p5];
+  show();
+  
+function remove(index){
+    person.splice(index,1);
+    show();
+}
+function getIndex(name1){
+    let len=person.length;
+    let index=-1;
+      for(let i=0;i<len;i++){
+        if(person[i].name===name1){
+          index=i;
+        }
+      }
+      return index;
+}
+
+function add(){
+     let name1=document.getElementById("name").value;
+     let sale1=document.getElementById("sale1").value;
+     let sale2=document.getElementById("sale2").value;
+     let sale3=document.getElementById("sale3").value;
+     let sale4=document.getElementById("sale4").value;
+     let arr={"name":name1,"s2015":sale1,"s2016":sale2,"s2017":sale3,"s2018":sale4};
+  if(getIndex(name1)<0){
+    name1="";
+    sale1="";
+    sale2="";
+    sale3="";
+    sale4="";
+     person.push(arr);            
+     show();
+  }
+  else{
+    alert("Person already exists");
+  }
+   }
+     function show(){
+    let str="";
+    let len=person.length;
+    let rr1="<div class='cell10'>Rank</div>";
+    let rr2="<div class='cell10'>Name</div>";
+    let rr3="<div class='cell10'>2015</div>";
+    let rr4="<div class='cell10'>2016</div>";
+    let rr5="<div class='cell10'>2017</div>";
+    let rr6="<div class='cell10'>2018</div>";
+    let rmv="<div class='cell101'>Remove</div>";
+    str=str+"<div>"+rr1+rr2+rr3+rr4+rr5+rr6+rmv+"</div>"
+    for(let i=0;i<len;i++){
+      let name1=person[i].name;
+      let x1=person[i].s2015;
+      let x2=person[i].s2016;
+      let x3=person[i].s2017;
+      let x4=person[i].s2018;
+      let x5=x1+x2+x3+x4;
+      let x7=[x1,x2,x3,x4];
+      let x6=x5/4;
+      let High=x1;
+      for(let j=0;j<x7.length;j++){
+        if(x7[j]>High){
+          High=x7[j];
+        }
+      }
+      let r1="<div class='cell20'>"+(i+1)+"</div>";
+      let name2="<div class='cell20'>"+name1+"</div>";
+      if(x1==High){
+        var y1="<div class='cell30'>"+x1+"</div>";
+      }
+      else if(x1>x6){
+        var y1="<div class='cell40'>"+x1+"</div>";
+      }
+      else{
+        var y1="<div class='cell50'>"+x1+"</div>";
+      }
+      if(x2==High){
+        var y2="<div class='cell30'>"+x2+"</div>";
+      }
+      else if(x2>x6){
+        var y2="<div class='cell40'>"+x2+"</div>";
+      }
+      else{
+        var y2="<div class='cell50'>"+x2+"</div>";
+      }
+      if(x3==High){
+        var y3="<div class='cell30'>"+x3+"</div>";
+      }
+      else if(x3>x6){
+        var y3="<div class='cell40'>"+x3+"</div>";
+      }
+      else{
+        var y3="<div class='cell50'>"+x3+"</div>";
+      }
+      if(x4==High){
+        var y4="<div class='cell30'>"+x4+"</div>";
+      }
+      else if(x4>x6){
+        var y4="<div class='cell40'>"+x4+"</div>";
+      }
+      else{
+        var y4="<div class='cell50'>"+x4+"</div>";
+      }
+      var y5="<div class='cell20'><button  onclick=remove("+i+")>Remove</button></div>";
+      var row="<div>"+r1+name2+y1+y2+y3+y4+y5+"</div>";
+      str=str+row;
+    }
+    let element=document.getElementById("prsn");
+    element.innerHTML=str;
+    document.body.appendChild(element);
+  }
+  </script>
+  </html>
+

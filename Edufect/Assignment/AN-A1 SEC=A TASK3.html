@@ -1,0 +1,45 @@
+<html>
+<head></head>
+<body>
+  Maths:<input type="text" id="math"></br>
+  English:<input type="text" id="eng"></br>
+  Science:<input type="text" id="scn"></br>
+  <button onclick="marks()">Click Here</button>
+</body>
+<script>
+    function marks(){
+
+          let mark1=document.getElementById("math").value;
+             mark1 = +mark1;
+          let math={"Name":"Maths","Marks":mark1};
+         let mark2=document.getElementById("eng").value;
+             mark2 = +mark2;
+         let english={"Name":"English","Marks":mark2};
+         let mark3=document.getElementById("scn").value;
+        mark3=+mark3;
+       let science={"Name":"Science","Marks":mark3};
+          let total=mark1+mark2+mark3;
+       let marks=[math,english,science];
+          let len=marks.length;
+       let High=marks[0].Marks;
+       let index=0;
+        for(var i=0;i<len;i++){
+           if(marks[i].Marks>High){
+              High==marks[i].Marks;
+                 index=i;
+           }
+           if(marks[i].Marks>=80){
+          console.log(marks[i].Name,":",marks[i].Marks," Grade : A")
+       }
+       else if(marks[i].Marks>=60 && marks[i].Marks<80){
+         console.log(marks[i].Name,":",marks[i].Marks," Grade : B")
+       }
+       else{
+         console.log(marks[i].Name,":",marks[i].Marks," Grade : c")
+       }
+     }
+     console.log("Total Marks : ",total);
+     console.log("Highest score: ",marks[index].Name);
+    }
+  </script>
+  </html>

@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        Email Id : <input type="text" id="txt"><br>
+        <button onclick="emailValidation()">Submit</button>
+    </body>
+    <script>
+        function emailValidation(){
+        let text=document.getElementById('txt').value;
+        let len=text.length;
+            if(text.indexOf('@')<=0 && len-4 !='.'){
+                console.log("Not proper Id");
+             }else{
+                console.log("Proper Id");
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="show()">Show</button><br>
+    </body>
+    <script>
+        addDD();
+        function show(){
+            let city=document.getElementById('mydd').value;
+            console.log(city);
+        }
+      function addDD(){
+          let myDD=document.createElement('select');
+          myDD.setAttribute('id',"mydd");
+          let option1='<option disabled>Select</option>'
+          let option2='<Option>London</option>'
+          let option3='<Option>Peris</option>'
+          let option4='<Option>Delhi</option>'
+          let option5='<Option>Newyork</option>'
+          let option6='<Option>Tokyo</option>'
+            options=option1+option2+option3+option4+option5+option6;
+            myDD.innerHTML=options
+            document.body.appendChild(myDD);
+      }
+    </script>
+</html>

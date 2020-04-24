@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task3.css">
+    </head>
+    <body>
+        <button onclick="getPerformance()">Get Students Performance</button><br>
+        <button onclick="getDetails()">Get Personal Details</button>
+        <div id="table1"></div>
+        <div id="table2"></div>
+    </body>
+    <script>
+        let urlPerformance="https://us-central1-fytpo-f6ed3.cloudfunctions.net/app/bins/dk67q";
+        let urldetails="https://us-central1-fytpo-f6ed3.cloudfunctions.net/app/bins/19pkvq";
+
+        function getPerformance(){
+            getData(urlPerformance,showPerformance);
+        }
+        function showPerformance(data){
+            showTable(data);
+        }
+        function getDetails(){
+            getData(urldetails,showDetails);
+        }
+        function showDetails(resp){
+            showTable1(resp);
+        }
+        function getData(url,fnResponse){
+            fetch(url)
+            .then(response=>{
+                return response.json();
+            })
+            .then(fnResponse)
+            .catch(err=>console.log(err));
+        }
+        function showTable(data){
+             var str='<div class="cell1">Maths</div> <div class="cell1">Science</div><div class="cell1">History</div></div>'
+                 let math1='<div class="cell">'+data.Maths+'</div>';
+                 let science1='<div class="cell">'+data.Science+'</div>';
+                 let history1='<div class="cell">'+data.History+'</div>';
+                 let row='<div>'+math1+science1+history1+'</div>';
+                 str+=row;
+             
+             let table=document.getElementById('table1');
+             table.innerHTML=str;
+             document.body.appendChild(table);
+            }
+            function showTable1(resp){
+             var str='<div class="cell1">Name</div> <div class="cell1">Age</div><div class="cell1">Address</div></div>'
+                 let name1='<div class="cell">'+resp.name+'</div>';
+                 let Age1='<div class="cell">'+resp.age+'</div>';
+                 let address='<div class="cell">'+resp.address+'</div>';
+                 let row='<div>'+name1+Age1+address+'</div>';
+                 str+=row;
+             
+             let table1=document.getElementById('table2');
+             table1.innerHTML=str;
+             document.body.appendChild(table1);
+            }
+    </script>
+</html>

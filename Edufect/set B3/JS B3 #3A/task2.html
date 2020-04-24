@@ -1,0 +1,73 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <div id="table"></div>
+    </body>
+    <script>
+        p1= {"name":"Jack","country":"USA","age":35};
+        p2={"name":"Amit","country":"India","age":38};
+        p3={"name":"Edward","country":"USA","age":41};
+        p4={"name":"Vishal","country":"India","age":30};
+        p5={"name":"Annie","country":"USA","age":27};
+        p6={"name":"Nick","country":"France","age":32};
+        p7={"name":"Francis","country":"France","age":44};
+        p8={"name":"Preeti","country":"India","age":25};
+        p9={"name":"Sophie","country":"France","age":29};
+        p10={"name":"Harpreet","country":"India","age":48};
+        p11={"name":"Bob","country":"USA","age":21};
+             let persons=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11];
+              showTable();
+              function showTable(){
+                    let str='<div><div class="header" onclick=clicked(0)>name</div>';
+                    str+='<div class="header" onclick=clicked(1)>Country</div>';
+                    str+='<div class="header" onclick=clicked(2)>Age</div>'
+                    for(let i=0;i<persons.length;i++){
+                        let person=persons[i];
+                        let name1='<div class="cell">'+person.name+'</div>';
+                        let country1='<div class="cell">'+person.country+'</div>';
+                        let age1='<div class="cell">'+person.age+'</div>';
+                        let row='<div>'+name1+country1+age1+'</div>';
+                        str=str+row;
+                    }
+                    let element=document.getElementById('table');
+                    element.innerHTML=str;
+                }
+                function clicked(headerId){
+                    switch(headerId){
+                        case 0:console.log('clicked name');persons.sort(comapare1);showTable();break;
+                        case 1:console.log('clicked country'); persons.sort(comapare2);showTable(); break;
+                        case 2:console.log('clicked age');persons.sort(comapare3);showTable();break;   
+                    }
+                } 
+                function comapare1(str1,str2){
+                    if(str1.name>str2.name){
+                        return -1;
+                    }if(str1.name==str2.name){
+                        return 0;
+                    } if(str1.name<str2.name){
+                        return 1;
+                    }
+                }  
+                function comapare2(str1,str2){
+                    if(str1.country>str2.country){
+                        return -1;
+                    }if(str1.country==str2.country){
+                        return 0;
+                    } if(str1.country<str2.country){
+                        return 1;
+                    }
+                }
+                function comapare3(str1,str2){
+                    if(str1.age>str2.age){
+                        return 1;
+                    }if(str1.age==str2.age){
+                        return 0;
+                    } if(str1.age<str2.age){
+                        return -1;
+                    }
+                }
+               
+    </script>
+</html>

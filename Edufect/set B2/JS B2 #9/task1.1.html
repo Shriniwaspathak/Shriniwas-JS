@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task1.1.css">
+    </head>
+    <body>
+        Name : <input type="text" id="nam"><br>
+        Age : <input type="text" id="age"><br>
+        City : <input type="text" id="cty"><br>
+        Technology : <input type="text" id="tech"><br>
+        <button id="btn1" onclick="add()">Add Person</button>
+        <div id="prsn"></div>
+        
+    </body>
+    <script>
+         let p1={'name':'Jack','Age':22,'City':'london','Technology':'Android'};
+        let p2={'name':'Mary','Age':25,'City':'NewYork','Technology':'JavaScript'};
+        let p3={'name':'Bob','Age':21,'City':'Peris','Technology':'React'};
+        let p4={'name':'Steve','Age':26,'City':'Delhi','Technology':'Angular'};
+        let person=[p1,p2,p3,p4];
+        showPerson();
+
+        function getName(name1){
+            let len=person.length;
+            let index=-1;
+            for(let i=0;i<len;i++)
+                if(person[i].name===name1){
+                    index=i;   
+            }
+            return index;
+        }
+        function add(){
+            let name2=document.getElementById('nam');
+            let age2=document.getElementById('age');
+            let city2=document.getElementById('cty');
+            let tech2=document.getElementById('tech');
+            let per={'name':name2.value,'Age':age2.value,'City':city2.value,'Technology':tech2 .value};
+            if(getName(name2.value)<0){
+                person.push(per);
+            }else{
+                alert('Person already exists');
+            }
+            showPerson();
+        }
+        function delete1 (i){
+            person.splice(i,1);
+            showPerson();
+        }
+        function edit(i){
+             let per=person[i];
+             let name2=document.getElementById('nam');
+            let age2=document.getElementById('age');
+            let city2=document.getElementById('cty');
+            let tech2=document.getElementById('tech');
+            name2.value=per.name;
+            age2.value=per.Age;
+            city2.value=per.City;
+            tech2.value=per.Technology;
+            let btn1=document.getElementById('btn1');
+            btn1.innerText="Edit Person";
+            btn1.setAttribute('onclick','editPerson(+'+i+')');
+        }
+
+        function editPerson(i){
+            let name2=document.getElementById('nam');
+            let age2=document.getElementById('age');
+            let city2=document.getElementById('cty');
+            let tech2=document.getElementById('tech');
+            let per={'name':name2.value,'Age':age2.value,'City':city2.value,'Technology':tech2 .value};
+            person[i]=per;
+            let btn1=document.getElementById('btn1');
+            btn1.innerText="Add Person";
+            btn1.setAttribute('onclick','add()');
+            showPerson();
+        }
+
+        function showPerson(){
+             let len=person.length;
+             let str='';
+             for(let i=0;i<len;i++){
+                 let pr=person[i];
+                 let name1='<div class="cell">'+pr.name+'</div>';
+                 let age1='<div class="cell1">'+pr.Age+'</div>';
+                 let city1='<div class="cell">'+pr.City+'</div>';
+                 let tech1='<div class="cell">'+pr.Technology+'</div>';
+                 let btn1='<div class="cell1"><button onclick=edit('+i+')>Edit</button></div>';
+                 let btn2='<div class="cell1"><button onclick=delete1('+i+')>Delete</button></div>';
+                 let row='<div>'+name1+age1+city1+tech1+btn1+btn2+'</div>';
+                 str+=row;
+             }
+             let table=document.getElementById('prsn');
+             table.innerHTML=str;
+            }
+    </script>
+</html>

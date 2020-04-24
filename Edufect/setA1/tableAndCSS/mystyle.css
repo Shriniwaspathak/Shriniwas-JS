@@ -1,0 +1,14 @@
+.mytable{
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+}
+.myrow{
+    background-color: rgb(76, 228, 76);
+    color:black;
+}
+.myheader{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}

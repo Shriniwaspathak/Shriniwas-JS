@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="show()">Show</button><br>
+        <select id="selectvalue">
+          </select>
+    </body>
+    <script>
+        addDD();
+        function show(){
+            let p=document.getElementById('selectvalue').value;
+            console.log(p);
+        }
+        function addDD(){
+          let arr=[{"name":"Jack","accno":"J2341"},{"name":"Martha","accno":"M44311"},{"name":"William","accno":"W0021"}
+                   ,{"name":"Amy","accno":"A1444"},{"name":"Tim","accno":"T4331"},{"name":"Donald","accno":"D8815"}];
+          let select = document.getElementById("selectvalue");
+             for(let i=0;i<arr.length;i++){
+              let y= arr[i];
+              select.innerHTML = select.innerHTML +
+                '<option value="' + arr[i].accno+ '">' + arr[i].name+ '</option>';
+
+             }
+      }
+    </script>
+</html>

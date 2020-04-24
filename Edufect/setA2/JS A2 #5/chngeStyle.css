@@ -1,0 +1,17 @@
+.btn{
+    background-color: brown;
+    color: white;
+}
+.txtgreen{
+    background-color: yellowgreen;
+    color: white;
+    text-align: center;
+ 
+}
+.txtblue{
+    background-color:rgb(52, 52, 161);
+    color: white;
+    text-align: right;
+    font-weight: bold;
+
+}

@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="getName()">Get Name</button><br>
+        <button onclick="getDetails()">Get Details</button>
+    </body>
+    <script>
+        let urlname="https://us-central1-fytpo-f6ed3.cloudfunctions.net/app/bins/1g7sq4";
+        let urldetails="https://us-central1-fytpo-f6ed3.cloudfunctions.net/app/bins/16r07g";
+
+        function getName(){
+            getData(urlname,showNames);
+        }
+        function showNames(data){
+            console.log("names :",data);
+            let len=data.length;
+            for(let i=0;i<len;i++){
+                console.log(data[i]);
+        }
+        }
+        function getDetails(){
+            getData(urldetails,showDetails);
+        }
+        function showDetails(resp){
+             console.log("course Details :",resp);
+             console.log("course Name :",resp.course);
+             console.log("course Discription :",resp.desc);
+             console.log("course lesson :",resp.lesson);
+        }
+        function getData(url,fnResponse){
+            fetch(url)
+            .then(response=>{
+                return response.json();
+            })
+            .then(fnResponse)
+            .catch(err=>console.log(err));
+        }
+    </script>
+</html>

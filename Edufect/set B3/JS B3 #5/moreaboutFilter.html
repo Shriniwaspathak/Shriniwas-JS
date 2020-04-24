@@ -1,0 +1,27 @@
+<script>
+    let number=[25,8,4,15,50,10,9,100];
+    let baseNum=20;
+    let numbers=number.filter(n1=>filterBig(n1,baseNum));
+    console.log(number);
+    console.log('filtered :',numbers);
+    let multx=4;
+    let mults=number.filter(n=>filterEven(n,multx));
+     console.log("multipule of ",multx,':',mults);
+     let largeMults=numbers.filter(n => filterEven(n,multx));
+     console.log("large multipule numbers :", largeMults);
+
+    function filterBig(num1,min){
+        if(num1>=min){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    function filterEven(n,x){
+        let rem=n%x;
+        if(rem==0)
+        return true;
+        else
+        return false;
+    }
+</script>

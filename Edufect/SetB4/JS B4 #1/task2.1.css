@@ -1,0 +1,16 @@
+.cell{
+    display:inline-block;
+    width: 30%;
+    background-color: grey;
+    color: white;
+    margin: 1px;
+    text-align: center;
+}
+.cell1{
+    display:inline-block;
+    width: 10%;
+    background-color: grey;
+    color: white;
+    margin: 1px;
+    text-align: center;
+}

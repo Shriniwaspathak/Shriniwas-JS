@@ -1,0 +1,27 @@
+<script>
+    let number=[56,7,9,1,89,23,15,55,67];
+    let person=[{'name':'james','age':25},
+               {'name':'steve','age':23},
+               {'name':'martha','age':30},
+               {'name':'patric','age':82,},
+               {'name':'kathy','age':56,}];
+
+               let num=7;
+               let arr=number.find(n=>fun1(n,num));
+               console.log(' First element of array which is Divisiable by 7 =',arr);
+               let index=number.findIndex(n=>fun1(n,num)) ;
+               console.log(' Index of first element of array which is Divisiable by 7=',index)
+
+               function fun1(n,num){
+               return n%num===0;
+               }
+                let a=50;
+               let arr1=person.find(p=>fun2(p,a));
+               console.log('First person whose age is greater than 50 ',arr1);
+               let index1=person.findIndex(p=>fun2(p,a));
+               console.log('Index of first person whose age is greater than 50= ',index1);
+
+               function fun2(p,a){
+                   return p.age>=a;
+               }
+</script>

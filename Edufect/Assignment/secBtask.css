@@ -1,0 +1,25 @@
+.cell{
+     border: black solid 3px;
+    padding: 5px;
+    margin: 1px;
+    background-color:lightgray;
+  }
+  .cell1{
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+  }
+  .cell2{
+    background-color: lightsteelblue;
+    padding: 5px;
+    text-align: center;
+  }
+  .cell3{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    text-align: center;
+     font-style: solid;
+  }
+  
+  

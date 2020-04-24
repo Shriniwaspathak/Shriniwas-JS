@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+     <body>
+         Name : <input type="text" id="name"><br>
+         Price: <input type="text"id="price"><br>
+
+         <button onclick="add()">Add Product</button><br>
+     </body>
+     <script>
+           let p1 ={"prodname":"Poppins","price":8};
+           let p2={"prodname":"Pepsi","price":15};
+           let p3={"prodname":"Minute Maid","price":25};
+           let p4={"prodname":"Red Bull","price":90};
+         let Products=[p1,p2,p3,p4]; 
+          function add(){
+           let name=document.getElementById('name').value;
+           let price=document.getElementById('price').value;
+           let product={'prodname':name,'price': +price};
+               for(let i=0;i<Products.length;i++){
+                   if(Products[i].price>product.price){
+                       Products.splice(i,0,product);
+                       break;
+                   }  
+               }
+           console.log(Products);
+          let dom= JSON.stringify(Products);
+
+          let element=document.createElement('div');
+        element.innerHTML=dom;
+        document.body.appendChild(element);
+         }
+
+     </script>
+    </html>

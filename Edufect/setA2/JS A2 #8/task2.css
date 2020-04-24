@@ -1,0 +1,14 @@
+.table{
+    margin: 30px;
+    padding: 5px;
+    border: 2px solid blue;
+    background-color: yellow ;
+}
+
+.cell{
+    display: inline-block;
+    width: 22%;
+    border: 1px solid red;
+    background-color: lightgray;
+   
+}

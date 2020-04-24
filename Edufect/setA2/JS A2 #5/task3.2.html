@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task3.2.css">
+    </head>
+    <body>
+         <div>
+             Sales of Pepsi: <br>
+             <div id="showCount">0</div>
+             <button class="btn" onclick="Pepsi()">Sell of Pepsi</button>
+         </div>
+         <div>
+            Sales of Coca Cola: <br>
+            <div id="showCount1">0</div>
+            <button class='btn1' onclick="cocacola()">Sell of Coca Cola</button>
+        </div>
+        <div id="txtmsg"></div>
+    </body>
+    <script>
+    var count=0;
+    var count1=0;
+    function Pepsi(){
+     count=count+1;  
+     var countNum=document.getElementById("showCount");
+     countNum.innerHTML=count ;
+     func();
+    }
+    function cocacola(){
+     count1=count1+1;  
+     var countNum1=document.getElementById("showCount1");
+     countNum1.innerHTML=count1 ;
+     func();
+    }
+       function func(){
+    if (count==count1){
+       let msg=document.getElementById('txtmsg');
+       msg.innerHTML="It is a TIE";
+       msg.className="tie";
+    } if(count>count1){
+        let msg=document.getElementById('txtmsg');
+       msg.innerHTML="Pepsi";
+       msg.className="pepsi";
+    }
+    if(count1>count){
+        let msg=document.getElementById('txtmsg');
+       msg.innerHTML="Coca Cola";
+       msg.className="coca";
+    }
+       } 
+    </script>
+</html>

@@ -1,0 +1,41 @@
+body{
+    background-color: lightblue;
+    color: #2f4c5c;
+   font-size: 25px;
+ font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+ text-align: center;
+}
+h1{
+    font-size: 50px;
+    color: #3747b3;
+    font-family: Lucida Bright,Georgia,serif; 
+    margin-bottom: 0px;
+}
+h2{
+    margin-top: 0px;
+}
+p{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+ol{
+    list-style-type: lower-roman;
+}
+ul{
+    list-style-type: url(pic.gpeg);
+    background-color: pink;
+    padding: 50px;
+    list-style-position: inside;
+}
+ul li{
+    background: red;
+    margin-bottom: 3px;
+}
+ol{
+    padding: 50px;
+    list-style-position: inside;
+}
+ol li{
+    margin-bottom: 3px;
+}

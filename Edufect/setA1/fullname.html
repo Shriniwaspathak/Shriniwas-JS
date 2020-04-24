@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <p id="firstname"></p>
+        <p id="lastname"></p>
+        <p id="fullname"></p>
+    </body>
+<script>
+   let firstname=document.getElementById('firstname');
+  let name1=firstname.innerHTML;
+  let str1="Jim ";
+  name1=str1;
+
+   let LastName=document.getElementById('lastname');
+    let name2=LastName.innerHTML;
+    let str2="Martins";
+    name2=str2;
+
+    let fullname=document.getElementById('fullname');
+    let name=fullname.innerHTML;
+    let str3=name1.concat(name2);
+    name=str3;
+    
+document.write(`Fullname = ${name} `);
+console.log(`Fullname = ${name}`);
+</script>
+</html>

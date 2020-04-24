@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        Text1 : <input type="text" id="txt1"><br>
+        Text2 : <input type="text" id="txt2"><br>
+        <button onclick="changeCase()">Click Here</button>
+    </body>
+    <script>
+        function changeCase(){
+            let inputfield1=document.getElementById('txt1');
+            let inputvalue1=inputfield1.value;
+
+            let inputfield2=document.getElementById('txt2');
+            let inputvalue2=inputfield2.value;
+            // let upper=inputvalue1.toUpperCase();
+            // console.log(`Uppercase =${upper}`);
+            // let lower=inputvalue2.toLowerCase();
+            // console.log(`Lowercase =${lower}`);
+
+            // let sub1 =inputvalue1.substring(0,5);
+            // console.log(`SubString 2,5=${sub1}`);
+            // let sub2=inputvalue1.substring(4);
+            // console.log(`SubString 4=${sub2}`);
+            let eq1=(inputvalue1==inputvalue2);
+            console.log(" Are Strings equal -",eq1);
+        }
+
+    </script>
+</html>

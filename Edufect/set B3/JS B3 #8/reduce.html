@@ -1,0 +1,41 @@
+<script>
+let numbers=[5,4,3,2,8];
+let people=['james','steve','martha','patric','kathy'];
+let emps=[{'name':'james','age':25,'dept':'finance'},
+           {'name':'steve','age':23,'dept':'tech'},
+           {'name':'martha','age':30,'dept':'ops'},
+           {'name':'patric','age':82,'dept':'finance'},
+           {'name':'kathy','age':56,'dept':'tech'}];
+
+           let sum=numbers.reduce((acc,curr)=>acc+curr);
+           console.log(sum);
+           let product=numbers.reduce((acc,curr)=>acc*curr);
+           console.log(product);
+           let max=numbers.reduce((acc,curr)=>fnMax(acc,curr));
+           console.log(max);
+           function fnMax(acc,curr){
+               if(curr>acc){
+                   return curr;
+               }else{
+                   return acc;
+               }
+           }
+           let allName=people.reduce((acc,curr)=>concat(acc,curr));
+           console.log(allName);
+           function concat(acc,curr){
+               console.log(acc+':'+curr);   
+               return acc+','+curr;
+           }
+           let sumAges=emps.reduce((acc,curr)=>acc+curr.age,0);
+           console.log(sumAges);
+           let deptName='tech';
+           let empsDept=emps.reduce((acc,curr)=>funDept(acc,curr,deptName),0);
+           console.log(deptName," ",empsDept);
+           function funDept(acc,curr,deptName){
+               if(curr.dept===deptName)
+                   return acc+1;
+                   else
+                   return acc;
+           }
+           
+    </script>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+   <link rel="stylesheet" href="style.css">
+    </head>
+   <body>
+       
+   </body>
+   <script>
+    let i=1;
+     let  num2=2;
+    document.write("<table class='mytable'>");
+        document.write("<tr class='myheader'>"); 
+        document.write("<td>Number</td>");
+        document.write("<td>Number+10</td>");
+        document.write("<td>Number+100</td>");
+        document.write("<td>Number+1000</td>");
+        document.write("</tr>");
+          
+          for(i=1;i<=5;i++){
+              let value1=i+10;
+              let value2=i+100;
+             let value3=i+1000;
+        document.write("<tr class='myrow'>"); 
+        document.write("<td>",i,"</td>");
+        document.write("<td>",value1,"</td>");
+        document.write("<td>",value2,"</td>");
+        document.write("<td>",value3,"</td>");
+        document.write("</tr>");
+          }
+    document.write("</table>");
+</script>
+</html>

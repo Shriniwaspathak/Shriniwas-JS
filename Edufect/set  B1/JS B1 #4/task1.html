@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="txt"><br>
+        <button onclick="findDigit()">click Here</button>
+    </body>
+    <script>
+        function findDigit(){
+           let inputfield=document.getElementById('txt');
+           let inputvalue=inputfield.value;
+           let digit='';
+            for(let i=0;i<inputvalue.length;i++){
+                let ch=inputvalue.charAt(i);
+                if(ch>='0' && ch <='9'){
+                    digit=digit+ch;
+                }
+            }
+            console.log("Digits =",digit);
+        }
+    </script>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+    </head>
+    <body>
+        Select the technology <br>
+   <select  id="dd01">
+    <option disabled>Select</option>
+       <option value="JS">JavaScript</option>
+       <option value="NG" >Angular</option>
+       <option >React</option>
+   </select>
+        <br>
+        <button onclick="showSelect()">Show Selected</button><br>
+    </body>
+    <script>
+        addDD();
+      function showSelect(){
+          let dd=document.getElementById('dd01').value;
+          console.log(dd);
+      }
+      function addDD(){
+          let myDD=document.createElement('select');
+          myDD.setAttribute('id',"mydd");
+          let option1='<Option>iOS</option>'
+            let option2='<Option>Android</option>'
+            options=option1+option2;
+            myDD.innerHTML=options
+            document.body.appendChild(myDD);
+      }
+    </script>
+</html>

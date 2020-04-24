@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <Body>
+        Enter String :<input type="text" id="txt"><br>
+        <button onclick="pattern()">Click Here</button>
+    </Body>
+<script>
+  function pattern(){
+      let str=document.getElementById('txt').value;
+         let str1='';
+         let x='x';
+          for(let i=0;i<str.length;i++){
+                let ch=str.charAt(i);
+                str1+=ch+x;
+                 x+='x';
+          }
+          console.log(str1);
+  }
+</script>
+</html>

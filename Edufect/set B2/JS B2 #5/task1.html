@@ -1,0 +1,32 @@
+<html>
+    <head>
+   <link rel="stylesheet" href="task1.css">
+    </head>
+    <body>
+    </body>
+    <script>
+        let p1={'code':'PX101','stock':15,"price":30,};
+        let p2={'code':'PX102','stock':33,"price":20,};
+        let p3={'code':'PX103','stock':24,"price":10,};
+        p1['totalValue']=p1.stock*p1.price;
+        p2['totalValue']=p2.stock*p2.price;
+        p3['totalValue']=p3.stock*p3.price;
+        
+        let products=[p1,p2,p3];
+        console.log(products);
+        let str='';
+        for(let i=0;i<products.length;i++){
+            let product=products[i];
+            let code1='<div class="cell" >'+product.code+'</div>';
+            let stock1='<div class="cell" >'+product.stock+'</div>';
+            let price1='<div class="cell" >'+product.price+'</div>';
+            let totalValue1='<div class="cell" >'+product.totalValue+'</div>';
+            let row='<div>'+code1+stock1+price1+totalValue1+'</div>';
+            str+=row;
+        }
+        console.log(str);
+        let element=document.createElement('div');
+        element.innerHTML=str;
+        document.body.appendChild(element);
+    </script>
+</html>

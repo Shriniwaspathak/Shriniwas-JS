@@ -1,0 +1,19 @@
+<script>
+    let arr=[{"name":"Jack","marks":88}, {"name":"Mary","marks":93},{"name":"Ed","marks":58}, {"name":"Tim","marks":63}]
+           console.log(JSON.stringify(arr));
+           arr.sort(compareName);
+           console.log(JSON.stringify(arr));
+           function compareName(std1,std2){
+            name1=std1.name;
+            name2=std2.name;
+            if(name1>name2){
+            return 1;
+        }
+        if(name1==name2){
+            return 0;
+        }
+        if(name1<name2){
+            return -1;
+        }
+           }
+</script>

@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+     <body>
+         Name : <input type="text" id="name"><br>
+         EmpId: <input type="text"id="id"><br>
+         Email: <input type="text" id='email'><br>
+         <button onclick="add()">Click Here</button><br>
+     </body>
+     <script>
+         let employees=[];
+         function add(){
+         let name=document.getElementById('name').value;
+         let id=document.getElementById('id').value;
+         let email=document.getElementById('email').value;
+           let employee={'Name':name,'Id':id,'email':email};
+           employees.push(employee);
+           console.log(employees);
+         }
+     </script>
+    </html>

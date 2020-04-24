@@ -1,0 +1,32 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="txt"><br>
+        <button onclick="changeChar()">click Here</button>
+    </body>
+    <script>
+        function changeChar(){
+           let inputfield=document.getElementById('txt');
+           let inputvalue=inputfield.value;
+           let newStr='';
+           let digit='';
+           let lower='';
+           let upper='';
+            for(let i=0;i<inputvalue.length;i++){
+                let ch=inputvalue.charAt(i);
+                if(ch>='0' && ch <='9'){
+                    digit=digit+ch;
+                }
+                if(ch>='A' && ch <='Z'){
+                     upper=upper+ch;
+                }
+                if(ch>='a' && ch <='z'){
+                lower=lower+ch;
+                }
+            }
+            newStr=lower+digit+upper
+            console.log(newStr);  
+        }
+    </script>
+</html>

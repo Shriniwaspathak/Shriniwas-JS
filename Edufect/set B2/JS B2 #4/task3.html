@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="sale()">Sale</button>
+    </body>
+    <script>
+         let product1=0;
+         let product2=0;
+         let product3=0;
+         let unit=0;
+         let value=0;
+        function sale(){
+            let p1={};
+          p1.PX101=product1;
+          p1.PX102=product2;
+          p1.PX103=product3;
+         p1.totalUnits=unit;
+         p1.totalValue=value;
+
+         product1=product1+1;
+         product2=product2+1;
+         product3=product3+1;
+         unit=unit+1;
+         value=value+1;
+         console.log(p1);
+        }
+</script>
+</html>

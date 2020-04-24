@@ -1,0 +1,49 @@
+<script>
+    let p1={'product':'PX144','category':'mobile','price':550,'quantity':56};
+    let p2={'product':'AK1364','category':'laptop','price':890,'quantity':58};
+    let p3={'product':'JY184','category':'tablet','price':250,'quantity':36};
+    let p4={'product':'OF134','category':'mobile','price':710,'quantity':89};
+    let p5={'product':'WV697','category':'laptop','price':369,'quantity':10};
+    let product=[p1,p2,p3,p4,p5];
+    console.log(JSON.stringify(product));
+    product.sort(compareValue);
+    console.log(JSON.stringify(product));
+
+    function comaprePrice(prod1,prod2){
+        if(prod1.price>prod2.price){
+            return 1;
+        }
+        if(prod1.price==prod2.price){
+            return 0;
+        }
+        if(prod1.price<prod2.price){
+            return -1;
+        }
+    }
+    function comapreProdID(prod1,prod2){
+        if(prod1.product>prod2.product){
+            return 1;
+        }
+        if(prod1.product==prod2.product){
+            return 0;
+        }
+        if(prod1.product<prod2.product){
+            
+            return -1;
+        }
+    }
+        function compareValue(prod1,prod2){
+            let v1=prod1.price*prod1.quantity;
+            let v2=prod2.price*prod2.quantity;
+        if(v1>v2){
+            return 1;
+        }
+        if(v1==v2){
+            return 0;
+        }
+        if(v1<v2){
+            return -1;
+        }
+    }
+    
+</script>

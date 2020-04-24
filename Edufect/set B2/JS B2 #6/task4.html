@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+     <body>
+         Name : <input type="text" id="name"><br>
+         EmpId: <input type="text"id="id"><br>
+         Email: <input type="email" id='email'><br>
+         Department: <input type="text" id='dep'><br>
+         <button onclick="add()">Click Here</button><br>
+     </body>
+     <script>
+         let employeesTech=[];
+         let employeesNonTech=[];
+         function add(){
+         let name=document.getElementById('name').value;
+         let id=document.getElementById('id').value;
+         let email=document.getElementById('email').value;
+         let department=document.getElementById('dep').value;
+         let employee={'Name':name,'Id':id,'email':email,'Department':department};
+           if(employee.Department=='Tech' || employee.Department=='IT'){
+               console.log(employee.department);
+               employeesTech.push(employee);     
+              }else{
+            employeesNonTech.push(employee);
+           }
+           console.log(employeesTech);
+         console.log(employeesNonTech);
+         }
+        
+     </script>
+    </html>

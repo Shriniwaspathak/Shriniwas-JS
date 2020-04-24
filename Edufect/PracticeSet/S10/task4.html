@@ -1,0 +1,20 @@
+<script>
+    let arr=[{"name":"Mary","salary":6800, "bonus":2200},
+             {"name":"Anita","salary":7600, "bonus":3300},
+               {"name":"Robin","salary":12800, "bonus":0},
+              {"name":"Sophia","salary":3400, "bonus":8200},
+             {"name":"Bruce","salary":9000, "bonus":500}];
+
+             let num=10000;
+             let arr1=arr.filter(p=>salaryFilter(p,num));
+             console.log(JSON.stringify(arr1));
+
+             function salaryFilter(p,num){
+               let total=p.salary+p.bonus;
+               if(total>num)
+               return true;
+               else
+               return false;
+             }
+    
+</script>

@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+        <body>
+            <button onclick="show()">Show</button><br>
+        </body>
+       <script>
+           addbox();   
+           function show(){
+               let status=document.getElementById('mycb1').checked;
+               console.log(status);
+
+               let status1=document.getElementById('mycb2').checked;
+               console.log(status1);
+
+               let status2=document.getElementById('mycb3').checked;
+               console.log(status2);
+           }
+
+           function addbox(){
+              let myCB1=document.createElement('input');
+               myCB1.type='checkbox';
+               myCB1.setAttribute('id','mycb1');
+               document.body.appendChild(myCB1);
+               let text=document.createTextNode("Batman");
+               document.body.appendChild(text);
+
+               let br=document.createElement('br');
+               document.body.appendChild(br);
+
+               let myCB2=document.createElement('input');
+               myCB2.type='checkbox';
+               myCB2.setAttribute('id','mycb2');
+               document.body.appendChild(myCB2);
+               let text1=document.createTextNode("SpiderMan");
+               document.body.appendChild(text1);
+
+               let br1=document.createElement('br');
+               document.body.appendChild(br1);
+              
+               let myCB3=document.createElement('input');
+               myCB3.type='checkbox';
+               myCB3.setAttribute('id','mycb3');
+               document.body.appendChild(myCB3);
+               let text2=document.createTextNode("Superman");
+               document.body.appendChild(text2);
+               
+               let br2=document.createElement('br');
+               document.body.appendChild(br2);
+           }
+       </script>
+</html>

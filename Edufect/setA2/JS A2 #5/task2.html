@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task2Style.css">
+    </head>
+    <body>
+        <button class="btn" onclick="fun1()">Add 1 to X</button><br> 
+        <div  id="textmsg"></div>
+    </body>
+    <script>
+          var num='';
+          var num1='';
+     function fun1(){
+          num=Math.floor(Math.random() * 11)
+          num1=num+1;
+         console.log(num);
+         if(num==0){
+            let ele =document.getElementById('textmsg');
+         ele.innerHTML="x = "+num;
+        ele.className="txt1";
+         }
+         if (num1>0 && num1<=5){
+        fun2();
+         }
+         else if(num1>5 && num1<=10){
+             fun3();
+         }
+         else{
+             func4();
+         }  
+     }
+     function fun2(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="X = "+ num1;
+         ele.className="txt2";
+     }
+     function fun3(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="X = "+num1;
+         ele.className="txt3";
+     }
+     function func4(){  
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="X = "+num1;
+         ele.className="txt4";
+     }
+    </script>
+</html>

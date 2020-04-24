@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+     <body>
+         Name : <input type="text" id="name"><br>
+         English: <input type="text"id="eng"><br>
+         Maths: <input type="text"id="mth"><br>
+         Science: <input type="text"id="scn"><br>
+         <button onclick="add()">Add Students</button><br>
+     </body>
+     <script>
+         var Students=[]; 
+          function add(){
+           let name=document.getElementById('name').value;
+           let english=document.getElementById('eng').value;
+           let math=document.getElementById('mth').value;
+           let science=document.getElementById('scn').value;
+           let total= english+math+science;
+           let student={'Name':name,'English': english,'Maths': math,'Science': science};
+           let len=Students.length;
+               if(len==0){
+                   Students.unshift(student);
+               }else{
+               for(let i=0;i<len;i++){
+                  total1=Students[i].English+Students[i].Maths+Students[i].Science;
+                  if(total1<total){
+                      Students.splice(i,0,student);
+                      break;
+                  }else if(i==len-1){
+                      Students.push(student);
+                  }
+               }
+            }
+          let dom= JSON.stringify(Students);
+          let element=document.createElement('div');
+        element.innerHTML=dom;
+        document.body.appendChild(element);
+         }   
+     </script>
+    </html>

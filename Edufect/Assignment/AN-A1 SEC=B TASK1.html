@@ -1,0 +1,39 @@
+<html>
+<head>
+  <link rel="stylesheet" href="secBtask.css">
+  </head>
+  <body></body>
+  <script>
+      let n=5;
+      let str1="";
+      let str2="";
+      let str3="";
+      document.write("<table class='cell'>");
+        document.write("<tr>")
+          document.write("<td class='cell3'>Number</td>");
+          document.write("<td class='cell3'>A's</td>");
+          document.write("<td class='cell3'>B's</td>");
+          document.write("<td class='cell3'>AB's</td>");
+          document.write("</tr>")
+          for(let i=1;i<=n;i++){
+            str1=str1+"A";
+            str2=str2+"B";
+            str3=str3+"AB";
+            document.write("<tr>");
+              if(i%2==0){
+                document.write("<td class='cell1'>"+i+"</td>");
+              document.write("<td class='cell1'>"+str1+"</td>");
+              document.write("<td class='cell1'>"+str2+"</td>");
+              document.write("<td class='cell1'>"+str3+"</td>");
+              }
+              else{
+                document.write("<td class='cell2'>"+i+"</td>");
+              document.write("<td class='cell2'>"+str1+"</td>");
+              document.write("<td class='cell2'>"+str2+"</td>");
+              document.write("<td class='cell2'>"+str3+"</td>");
+              }
+              document.write("</tr>")
+          }
+           document.write("</table>")
+    </script>
+    </html>

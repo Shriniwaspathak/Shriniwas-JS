@@ -1,0 +1,20 @@
+.parent{
+    background-color: aquamarine;
+    height: 75vh;
+    width: 75vw;
+    padding:1cm;
+    position: relative;
+}
+.parent p{
+    position: relative;
+    z-index: 10;
+}
+.child{
+    background: red;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+    top: 0;
+  left: 0;
+}

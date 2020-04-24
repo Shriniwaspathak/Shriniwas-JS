@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="sale1()">Sale-PX101</button>
+        <button onclick="sale2()">Sale-PX102</button>
+        <button onclick="sale3()">Sale-PX103</button>
+    </body>
+    <script>
+         let stock1=15
+        function sale1(){
+            let p1={};
+          p1.code="PX101";
+          p1.stock=stock1;
+          p1.price=30;
+          stock1=stock1-1;
+         console.log(p1);
+        }
+        let stock2=24;
+        function sale2(){
+          let p2={};
+          p2.code="PX102";
+          p2.stock=stock2;
+          p2.price=20;
+          stock2=stock2-1;
+          console.log(p2);
+        }
+        let stock3=33;
+        function sale3(){
+          let p3={};
+          p3.code="PX101";
+          p3.stock=stock3;
+          p3.price=10;
+          stock3=stock3-1;
+          console.log(p3);
+        }
+</script>
+</html>

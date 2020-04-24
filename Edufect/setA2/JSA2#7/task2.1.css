@@ -1,0 +1,18 @@
+.btn1{
+    background-color: #3333f2;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.btn2{
+    background-color: #f23333;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 15px;
+}
+.btn3{
+    background-color: #33f233;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 40px;
+}

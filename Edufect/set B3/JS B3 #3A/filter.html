@@ -1,0 +1,25 @@
+<script>
+    let number=[25,8,4,15,50,10,9,100];
+    let numbers=number.filter(n1=>filterBig(n1));
+    console.log(number);
+    console.log('filtered :',numbers);
+    let mults=number.filter(n=>filterEven(n));
+     console.log(mults);
+     let largeMults=numbers.filter(n => filterEven(n));
+     console.log("large even numbers :",largeMults);
+
+    function filterBig(num1){
+        if(num1>=10){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    function filterEven(n){
+        let rem=n%2;
+        if(rem==0)
+        return true;
+        else
+        return false;
+    }
+</script>

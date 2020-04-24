@@ -1,0 +1,31 @@
+<script>
+      let   arr1=[{"name":"Mary","city":"London"},
+       {"name":"Anita","city":"Paris"},
+        {"name":"Edward","city":"New York"},
+        {"name":"Thomas","city":"Rome"},
+        {"name":"Robin","city":"Seattle"},
+        {"name":"Sophia","city":"Los Angeles"},
+        {"name":"Bruce","city":"Delhi"}];
+      let  arr2=[{"city":"London","continent":"Europe"}, 
+      {"city":"Delhi","continent":"Asia"},
+      {"city":"Seattle","continent":"North America"},
+        {"city":"Paris","continent":"Europe"},
+        {"city":"New York","continent":" North America"},
+        {"city":"Rome","continent":"Europe"},
+        {"city":"Bengaluru","continent":"Asia"},
+        {"city":"Los Angeles","continent":"North America"}];
+
+        let arr3=arr1.filter(p=>filterJson(p,arr2));
+        console.log(JSON.stringify(arr3));
+
+        function filterJson(p,arr2){
+           let str='Europe';
+           for(let i=0;i<arr2.length;i++){
+               let a=arr2[i];
+               if(a.continent==str && a.city==p.city)
+               return true;
+             else
+                false;
+            }
+           }
+    </script>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="txt"><br>
+        <button onclick="gettext()">Get Text</button>
+    </body>
+    <script>
+        function gettext(){
+            let inputfield=document.getElementById('txt');
+            let inputvalue=inputfield.value;
+            console.log("Value of text field =",inputvalue);
+            let ele=document.createElement('div');
+            ele.innerHTML=inputvalue;
+            document.body.appendChild(ele);
+            let num= +inputvalue;
+            console.log("num =",num);
+            console.log("twice of num =",num*2);
+        }
+
+    </script>
+</html>

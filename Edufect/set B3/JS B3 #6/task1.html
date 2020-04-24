@@ -1,0 +1,76 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="task1.css">
+    </head>
+    <body>
+        String : <input type="text" id="txt"><br>
+        <button onclick="namefltr()">Filter by Name</button>
+        <button onclick="techfltr()">Filter by Technology</button>
+        <div id="table"></div>
+    </body>
+    <script>
+                  let p1={"name":"Jack","tech":"Android"};
+                  let p2={"name":"Mary","tech":"React"};
+                  let p3={"name":"Bob","tech":"Angular"};
+                  let p4={"name":"Steve","tech":"Spring"};
+                  let p5={"name":"James","tech":"Android"};
+                  let p6={"name":"Julia","tech":"Android"}
+                  let p7={"name":"Michel","tech":"React"};
+                  let p8={"name":"Bill","tech":"Angular"};
+                  let p9={"name":"Sonny","tech":"Spring"};
+                  let p10={"name":"Martins","tech":"React"};
+                  let p11={"name":"Bruce","tech":"Angular"};
+                  let p12={"name":"Sam","tech":"Spring"};
+                  var person=[p1,p2,p3,p4,p5,p6,p7,p8,p8,p10,p11,p12];
+                   showTable(person);
+
+                   function namefltr(){
+                       let inputName=document.getElementById('txt').value;
+                       let inputName1=person.filter(p=>filterName(p,inputName));
+                       showTable(inputName1);
+                   }
+                   function filterName(p,inputName){
+                      let len=inputName.length;
+                       let str='';
+                       for(let i=0;i<len;i++){
+                           str+=p.name.charAt(i);           
+                        }
+                        if(str==inputName){
+                        return true;
+                         } else {
+                        return false; 
+                         }
+                   }
+                   function techfltr(){
+                       let inputtech=document.getElementById('txt').value;
+                       let inputtech1=person.filter(p=>filteTech(p,inputtech));
+                       showTable(inputtech1);
+                   }
+                   function filteTech(p,inputtech){
+                       let len=inputtech.length;
+                       let str='';
+                       for(let i=0;i<len;i++){
+                           str+=p.tech.charAt(i);           
+                        }
+                        if(str==inputtech){
+                          return true;
+                         } else{ 
+                        return false; 
+                         }
+                   }
+            function showTable(person){
+             let len=person.length;
+             let str='';
+             for(let i=0;i<len;i++){
+                 let pr=person[i];
+                 let name1='<div class="cell">'+pr.name+'</div>';
+                 let tech1='<div class="cell">'+pr.tech+'</div>';
+                 let row='<div>'+name1+tech1+'</div>';
+                 str+=row;
+             }
+             let table=document.getElementById('table');
+             table.innerHTML=str;
+             document.body.appendChild(table);
+            }
+    </script>
+</html>

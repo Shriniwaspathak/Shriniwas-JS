@@ -1,0 +1,23 @@
+<script>
+    arr=[{"fname":"Jack","lname":"Smith","city":"London"},
+          {"fname":"Mary","lname":"Markle","city":"Amsterdam"}, 
+          {"fname":"Ed","lname":"May","city":"Paris"},
+         {"fname":"Tim","lname":"Gates","city":"Rome"}]
+         arr.sort(compareLength);
+         console.log(JSON.stringify(arr));
+
+         function compareLength(per1,per2){
+             len1=per1.fname.length+per1.lname.length+per1.city.length;
+             len2=per2.fname.length+per2.lname.length+per2.city.length;
+             if(len1>len2){
+          return 1;
+         } 
+         if(len1==len2){
+          return 0;
+         } 
+         if(len1<len2){
+          return -1;
+         }
+      }
+
+</script>

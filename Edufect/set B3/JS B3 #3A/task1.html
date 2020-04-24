@@ -1,0 +1,80 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <div id="table"></div>
+    </body>
+    <script>
+             let p1={"name":"Jack","maths":55,"english":60,"science":62};
+             let p2=  {"name":"Anita","maths":62,"english":65,"science":56};
+             let p3=  {"name":"Thomas","maths":68,"english":58,"science":54};
+             let p4=  {"name":"Steve","maths":51,"english":56,"science":68};
+             let p5=  {"name":"Julia","maths":47,"english":77,"science":72};
+             let p6=  {"name":"Mary","maths":72,"english":55,"science":60};
+             let persons=[p1,p2,p3,p4,p5,p6];
+              showTable();
+
+                function showTable(){
+                    let str='<div><div class="header" onclick=clicked(0)>name</div>';
+                    str+='<div class="header" onclick=clicked(1)>Math</div>';
+                    str+='<div class="header" onclick=clicked(2)>English</div>';
+                    str+='<div class="header" onclick=clicked(3)>Science</div></div>';
+                    for(let i=0;i<persons.length;i++){
+                        let person=persons[i];
+                        let name1='<div class="cell">'+person.name+'</div>';
+                        let math1='<div class="cell">'+person.maths+'</div>';
+                        let english1='<div class="cell">'+person.english+'</div>';
+                        let science1='<div class="cell">'+person.science+'</div>';
+                        let row='<div>'+name1+math1+english1+science1+'</div>';
+                        str=str+row;
+                    }
+                    let element=document.getElementById('table');
+                    element.innerHTML=str;
+                }
+                function clicked(headerId){
+                    switch(headerId){
+                        case 0:console.log('clicked name');persons.sort(comapare1);showTable();break;
+                        case 1:console.log('clicked maths'); persons.sort(comapare2);showTable(); break;
+                        case 2:console.log('clicked english');persons.sort(comapare3);showTable();break;
+                        case 3:console.log('clicked science');persons.sort(comapare4);showTable();break;
+                    }
+                } 
+                function comapare1(str1,str2){
+                    if(str1.name>str2.name){
+                        return 1;
+                    }if(str1.name==str2.name){
+                        return 0;
+                    } if(str1.name<str2.name){
+                        return -1;
+                    }
+                }  
+                function comapare2(str1,str2){
+                    if(str1.maths>str2.maths){
+                        return 1;
+                    }if(str1.maths==str2.maths){
+                        return 0;
+                    } if(str1.maths<str2.maths){
+                        return -1;
+                    }
+                }
+                function comapare3(str1,str2){
+                    if(str1.english>str2.english){
+                        return 1;
+                    }if(str1.english==str2.english){
+                        return 0;
+                    } if(str1.english<str2.english){
+                        return -1;
+                    }
+                }
+                function comapare4(str1,str2){
+                    if(str1.science>str2.science){
+                        return 1;
+                    }if(str1.science==str2.science){
+                        return 0;
+                    } if(str1.science<str2.science){
+                        return -1;
+                    }
+                }
+    </script>
+</html>

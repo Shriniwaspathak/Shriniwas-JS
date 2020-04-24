@@ -1,0 +1,22 @@
+.table{
+    margin: 30px;
+    padding: 5px;
+    border: 2px solid blue;
+    background-color: yellow ;
+}
+.cell1{
+    display: inline-block;
+    text-align: center;
+    width: 32%;
+    border: 2px solid gray;
+    background-color:lightgreen;
+   
+}
+.header{
+    display: inline-block;
+    width: 32%;
+    border: 2px solid gray;
+    background-color: black;
+    color: white;
+   
+}

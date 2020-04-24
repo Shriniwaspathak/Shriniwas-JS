@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+   <select  id="dd">
+       <option disabled>Select Student</option>
+       <option value="ST451">Jack</option>
+       <option value="ST288">Michelle</option>
+       <option value="ST329">Edward</option>
+       <option value="ST420">Willium</option>
+   </select>
+        <br>
+        <button onclick="showSelect()">Show Selected</button><br>
+    </body>
+    <script>
+      function showSelect(){
+          let dd=document.getElementById('dd').value;
+          console.log(dd);
+      }
+     
+    </script>
+</html>

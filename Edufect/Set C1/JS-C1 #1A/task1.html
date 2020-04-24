@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="show()">Show</button><br>
+        <select id="selectNumber">
+            <option disabled>Select Year</option>
+          </select>
+    </body>
+    <script>
+        addDD();
+        function show(){
+            let year=document.getElementById('selectNumber').value;
+            console.log(year);
+        }
+        function addDD(){
+          let arr=[2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020];
+          let select = document.getElementById("selectNumber");
+             for(let i=0;i<arr.length;i++){
+              let y= arr[i];
+               let element = document.createElement("option");
+               element.innerHTML = y;
+                select.appendChild(element);
+             }
+      }
+    </script>
+</html>

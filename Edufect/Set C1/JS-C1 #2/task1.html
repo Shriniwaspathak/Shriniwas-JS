@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        Subjects:- <br>
+        <input type="checkbox" id="cb1" checked>Math</input> <br>
+        <input type="checkbox" id="cb2">Physics</input><br>
+        <input type="checkbox" id="cb3" >Chemistry</input><br>
+        <input type="checkbox" id="cb4" checked>English</input><br>
+        <button onclick="showChecked()">show </button><br>
+    </body>
+       <script>
+          
+            
+           function showChecked(){
+               let sub=document.getElementById('cb1').checked;
+               console.log(sub);
+               let sub1=document.getElementById('cb2').checked;
+               console.log(sub1);
+
+               let sub2=document.getElementById('cb3').checked;
+               console.log(sub2);
+               let sub4=document.getElementById('cb4').checked;
+               console.log(sub4);
+           }
+         
+       </script>
+</html>

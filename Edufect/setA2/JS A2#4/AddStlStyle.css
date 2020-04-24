@@ -1,0 +1,16 @@
+.btn{
+    background-color: rgb(218, 132, 132);
+}
+.btn:hover{
+    background-color: rgb(211, 44, 44);
+}
+.text{
+    background-color: rgb(139, 169, 235);
+    color: black;
+    text-align: center;
+}
+.text:hover{
+    background-color: cadetblue;
+    font-weight: bold;
+    text-align: right;
+}

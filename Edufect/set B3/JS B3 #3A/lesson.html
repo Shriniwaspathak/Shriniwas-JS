@@ -1,0 +1,35 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="table"></div>
+    </body>
+    <script>
+        let persons=[{'name':'jack','age':20,'city':'london'},
+                    {'name':'Mary','age':26,'city':'Peris'}];
+                    showTable();
+                function showTable(){
+                    let str='<div><div class="header" onclick=clicked(0)>name</div>';
+                    str+='<div class="header" onclick=clicked(1)>age</div>'
+                    str+='<div class="header" onclick=clicked(2)>city</div></div>'
+                    for(let i=0;i<persons.length;i++){
+                        let person=persons[i];
+                        let name1='<div class="cell">'+person.name+'</div>';
+                        let age1='<div class="cell">'+person.age+'</div>';
+                        let city1='<div class="cell">'+person.city+'</div>';
+                        let row='<div>'+name1+age1+city1+'</div>';
+                        str=str+row;
+                    }
+                    let element=document.getElementById('table');
+                    element.innerHTML=str;
+                }
+                function clicked(headerId){
+                    switch(headerId){
+                        case 0:console.log('clicked name');break;
+                        case 1:console.log('clicked age');break;
+                        case 2:console.log('clicked city');break;
+                    }
+                }    
+    </script>
+</html>

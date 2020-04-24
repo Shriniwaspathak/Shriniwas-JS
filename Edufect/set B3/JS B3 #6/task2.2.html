@@ -1,0 +1,107 @@
+<html>
+    <head>
+   <link rel="stylesheet" href="task2.css">
+    </head>
+    <body>
+        New Weight between ::<input type="text" id="txt1">
+              <input type="text" id="txt2">
+              <button onclick="weight()">Filter</button>
+              <div id=table></div>
+    </body>
+    <script>
+         let p1={"name":"Jack","oldwt":65,"newwt":68};
+         let p2= {"name":"Mary","oldwt":55,"newwt":53};
+         let p3= {"name":"Bob","oldwt":71,"newwt":66};
+                   let p4= {"name":"Steve","oldwt":62,"newwt":68};
+                    let p5={"name":"James","oldwt":81,"newwt":77};
+                   let p6= {"name":"Julia","oldwt":52,"newwt":52};
+                    let p7={"name":"Micheal","oldwt":68,"newwt":68};
+                   let p8= {"name":"Bill","oldwt":60,"newwt":61};
+                   let p9= {"name":"Sonny","oldwt":61,"newwt":60};
+                   var persons=[p1,p2,p3,p4,p5,p6,p7,p8,p9];
+                    showTable(persons);
+                  
+                    function weight(){
+                        let arr=persons.filter(p=>WeightFilter(p));
+                        showTable(arr);
+                    }
+                    function WeightFilter(p){
+                        let newWeight=document.getElementById('txt1').value;
+                        let oldWeight=document.getElementById('txt2').value;
+                        let newWeight2= +newWeight;
+                        let oldWeight2= +oldWeight;
+                     if(p.oldwt>=newWeight2 && p.oldwt<=oldWeight2 && p.newwt>=newWeight2 && p.newwt<=oldWeight2)
+                            return true;
+                            else
+                            return false;
+                    }
+            function showTable(persons){
+              
+                let str='<div><div class="cell1" onclick=fun1()>Name</div>';
+                    str+='<div class="cell1" onclick=fun2()>Old Weight</div>'
+                    str+='<div class="cell1" onclick=fun3()>New Weight</div></div>';
+                for(let i=0; i<persons.length;i++){
+                 let pr=persons[i];
+                 if(pr.newwt>pr.oldwt){
+                    var name1='<div class="cell">'+pr.name+'</div>';
+                    var Oldweight1='<div class="cell">'+pr.oldwt+'</div>';
+                    var Newweight1='<div class="cell">'+pr.newwt+'</div>';
+                 }else if(pr.newwt<pr.oldwt){
+                    var name1='<div class="cell2">'+pr.name+'</div>';
+                    var Oldweight1='<div class="cell2">'+pr.oldwt+'</div>';
+                    var Newweight1='<div class="cell2">'+pr.newwt+'</div>';
+                 }else{
+                    var name1='<div class="cell3">'+pr.name+'</div>';
+                    var Oldweight1='<div class="cell3">'+pr.oldwt+'</div>';
+                    var Newweight1='<div class="cell3">'+pr.newwt+'</div>';
+                 }
+                 let row='<div>'+name1+Oldweight1+Newweight1+'</div>';
+                 str+=row;
+             }
+             let table=document.getElementById('table');
+             table.innerHTML=str;
+             document.body.appendChild(table);
+                }
+               
+                function fun1(){
+                    let a1=persons.sort(comapare1);
+                    showTable(a1);
+                }
+                function fun2(){
+                    let a2=persons.sort(comapare2);
+                    showTable(a2);
+                }
+                function fun3(){
+                    let a3=persons.sort(comapare3);
+                    showTable(a3);
+                }
+                function comapare1(str1,str2){
+                    if(str1.name>str2.name){
+                        return 1;
+                    }if(str1.name==str2.name){
+                        return 0;
+                    }if(str1.name<str2.name){
+                        return -1;
+                    }   
+                }
+                function comapare2(str1,str2){
+                    if(str1.oldwt>str2.oldwt){
+                        return 1;
+                    }if(str1.oldwt==str2.oldwt){
+                        return 0;
+                    } if(str1.oldwt<str2.oldwt){
+                        return -1;
+                    }
+                }
+                function comapare3(str1,str2){
+
+                    if(str1.newwt>str2.newwt){
+                        return 1;
+                    }if(str1.newwt==str2.newwt){
+                        return 0;
+                    } if(str1.newwt<str2.newwt){
+                        return -1;
+                    }
+                }
+    </script>
+</html>

@@ -1,0 +1,16 @@
+<script>
+    let str="HELLO";
+    let len=str.length;
+    let len1=Math.floor(len/2);
+    let str1='';
+    if(len%2==0){
+        str1+= str.substring(len/2,len);
+        str1+=str.substring(0,len/2);
+    }else{
+        str1= str.substring(len1+1,len);
+        str1+=str.charAt(len1)   
+        str1+=str.substring(0,len1);  
+    }
+   console.log(str1);
+   
+</script>

@@ -1,0 +1,20 @@
+<script>
+    let p1={};
+    p1.name="Mark";
+    p1.email="mark@gmail.com";
+    p1.company='google';
+    p1.salary=80000;
+    console.log(p1);
+
+    let p2={};
+    p2['name']=p1.name;
+    p2['email']=p1.email;
+    p2['company']=p1.company;
+    p2['salary']=p1.salary;
+    console.log(p2);
+
+    let p3={'name':p2.name,'email':p1.email,'company':p2.company,'salary':p1.salary};
+    console.log(p3);
+
+
+</script>

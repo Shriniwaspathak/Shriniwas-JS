@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="txt"><br>
+        <button onclick="arrayString()">Click Here</button>
+    </body>
+    <script>
+         let arr1=[];
+        function arrayString(){
+        let len=arr1.length;
+        let str=document.getElementById('txt').value;
+        arr1.push(str);
+        console.log(arr1);
+        let arr2=[...arr1];
+        arr2.sort();
+        console.log(arr2);
+
+        }
+    </script>
+</html>

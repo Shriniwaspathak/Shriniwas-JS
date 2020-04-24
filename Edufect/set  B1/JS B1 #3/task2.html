@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="txt"><br>
+        <input type="text" id="txt1"><br>
+        <button onclick="largeString()">Get Text</button>
+    </body>
+    <script>
+        function largeString(){
+            let inputfield1=document.getElementById('txt');
+            let inputvalue=inputfield1.value;
+
+            let inputfield2=document.getElementById('txt1');
+            let inputvalue1=inputfield2.value;
+           
+           let len1=inputvalue.length;
+           let len2=inputvalue1.length;
+           if(len1>len2){
+               console.log(inputvalue)
+           }     else{
+               console.log(inputvalue1);
+           }       
+        }
+    </script>
+</html>

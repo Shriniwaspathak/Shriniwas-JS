@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="txt"><br>
+        <button onclick="validate()">Validate</button>
+        <div id="txtvalid"></div>
+    </body>
+    <script>
+        function validate(){
+            let inpfeild=document.getElementById('txt');
+            let inpvalue=inpfeild.value;
+            let num= +inpvalue;
+            let ele=document.getElementById('txtvalid');
+            // if(isNaN(num)){
+            //     ele.innerHTML="Not a number, Please enter again"
+            // }else{
+            //     ele.innerHTML="";
+            // }
+            let len=inpvalue.length;
+            if(len<5){
+                ele.innerHTML="The input should have minimum 5 characters"
+            }else{
+                ele.innerHTML='';
+            }
+        }
+    </script>
+</html>

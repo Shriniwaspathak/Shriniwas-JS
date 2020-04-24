@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="addtext()">Add Text</button><br>
+    </body>
+    <script>
+        var x=100;
+        function addtext(){
+            let ele=document.createElement("div");
+            ele.innerHTML=x;
+            x=x+1;
+            document.body.appendChild(ele);
+        }
+    </script>
+</html>

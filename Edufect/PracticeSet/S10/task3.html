@@ -1,0 +1,16 @@
+<script>
+    let arr=['Edufect','Java','Master',"tech"];
+    let arr1=arr.filter(str=>strFilter(str));
+    console.log(arr1);
+   
+   function strFilter(str){
+       for(let i=0;i<str.length;i++){
+             let ch=str.charAt(i);
+                if(ch>='A' && ch <='Z')
+                    return true;
+                 else
+                 return false;
+             }
+     }
+   
+</script>

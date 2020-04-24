@@ -1,0 +1,17 @@
+<script>
+    let arr=["Hello","React","Java","Python","Hibernate", "JavaScript"];
+        
+    let allcourse=arr.reduce((acc,curr)=>funCourse(acc,curr));
+    console.log('Largest element =',allcourse);
+
+           function funCourse(acc,curr){
+                 let len1=acc.length;
+                 let len2=curr.length;
+                 if(len1>len2){
+                     return acc;
+                 }else{
+                     return curr;
+                 }
+    }
+    
+</script>

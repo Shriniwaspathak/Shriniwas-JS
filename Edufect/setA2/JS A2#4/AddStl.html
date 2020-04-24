@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="AddStlStyle.css">
+    </head>
+    <body>
+        <button class="btn" onclick="showtext()">Show Text</button>
+    <br><br>    
+        <button class="btn" onclick="changeText()">Change text</button>
+        <br>
+        <div class="text"id="textmsg"></div>
+    </body>
+    <script>
+     function showtext(){
+         let ele =document.getElementById('textmsg');
+         ele.innerHTML="Showing text on button click";
+     }
+     function changeText(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="changing the text";
+     }
+    </script>
+</html>

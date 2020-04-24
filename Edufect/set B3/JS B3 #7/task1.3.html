@@ -1,0 +1,27 @@
+<script>
+    let number=[56,7,9,1,89,23,15,51,67];
+    let person=[{'name':'james','age':25},
+               {'name':'steve','age':23},
+               {'name':'martha','age':30},
+               {'name':'patric','age':82,},
+               {'name':'kathy','age':56,}];
+
+               let num=11;
+               let arr=number.find(n=>fun1(n,num));
+               console.log(' if no element is matches to condition it will return undefined  =',arr);
+               let index=number.findIndex(n=>fun1(n,num)) ;
+               console.log(' if no element is matches to condition it will return negative value=',index)
+
+               function fun1(n,num){
+               return n%num===0;
+               }
+                let a=10;
+               let arr1=person.find(p=>fun2(p,a));
+               console.log('if no element is matches to condition it will return undefined= ',arr1);
+               let index1=person.findIndex(p=>fun2(p,a));
+               console.log('if no element is matches to condition it will return negative value',index1);
+
+               function fun2(p,a){
+                   return p.age<=a;
+               }
+</script>

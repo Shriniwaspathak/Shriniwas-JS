@@ -1,0 +1,32 @@
+.cell1{
+    background-color: black;
+    color:white;
+    display: inline-block;
+    width: 25%;
+    margin: 1px;
+    text-align: center;
+}
+.cell{
+    display: inline-block;
+    width: 25%;
+    margin: 1px;
+    text-align: center;
+    background-color:red;
+    color: white;
+}
+.cell3{
+    display: inline-block;
+    width: 25%;
+    margin: 1px;
+    text-align: center;
+    background-color:lightgray;
+    color: white;
+}
+.cell2{
+    display: inline-block;
+    width: 25%;
+    margin: 1px;
+    text-align: center;
+    background-color:green;
+    color: white;
+}

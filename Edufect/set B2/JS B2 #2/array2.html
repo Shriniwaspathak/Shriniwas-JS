@@ -1,0 +1,25 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="array2.css">
+    </head>
+    <body>    
+    </body>
+    <script>
+        const name=['Jack','Marry','Rishu','Steve'];
+        const city=['London','Newyork','Bangalore','Delhi'];
+        const age=[23,32,80,36];
+        const len=name.length;
+        var str='';
+        for(let i=0;i<len;i++){
+            let name1="<div class='cell'>"+name[i]+"</div>";
+            let city1="<div class='cell'>"+city[i]+"</div>";
+            let age1="<div class='cell1'>"+age[i]+"</div>";
+            let row='<div>'+name1+city1+age1+'</div>';
+            str =str+row;
+        }
+        console.log(str);
+        let element=document.createElement('div');
+        element.innerHTML=str;
+        document.body.appendChild(element);
+    </script>
+</html>

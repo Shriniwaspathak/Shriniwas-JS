@@ -1,0 +1,50 @@
+<html>
+    <head>
+<link rel="stylesheet" href="modifydisplay.css">
+    </head>
+    <body>
+        <h2>Product Details</h2>
+        <div id="productid" class="prdstyle"></div>
+    </body>
+    <script>
+        let p1={'name':'maggie','price':20,'desc':'Maggie is a popular amoungs youth and children.It is produced by nestle'};
+        let p2={'name':'perk','price':30,'desc':'Perk is a popular choclate bar which is famous amoungs youth and children.'};
+        let p3={'name':'gems','price':10,'desc':'gems is a popular amoungs youth and children.It is multicolored chocklate'};
+        let p4={'name':'pepsi','price':25,'desc':'Pepsi is a popular cold drink amoungs youth and children'};
+        let p5={'name':'coca cola','price':75,'desc':'coca cola is a popular cold drink amoungs youth and children'};
+        let p6={'name':'good day','price':35,'desc':'Good Day is a popular  biscuit amoungs youth and children.'};
+        let p7={'name':'dairy milk','price':45,'desc':'Dairy milk is a popular choclate amoungs youth and children.'};
+        let p8={'name':'lindt','price':55,'desc':'lindt is very expensive choclate.It is popular amoungs the urban rich'};
+        let products =[p1,p2,p3,p4,p5,p6,p7,p8];
+        let detailIndex=-1;
+        show();
+        function showDetails(index){
+            detailIndex=index;
+            show();
+        }
+        function hideDetails(index){
+            detailIndex=-1;
+            show();
+        }
+        function show(){
+            let len=products.length;
+            let str=''
+            for(let i=0;i<len;i++){
+                let product=products[i];
+                let display='<div class="cell">';
+                display +='name : '+product.name+'<br>';
+                display +='price : '+product.price+'<br>';
+                if(detailIndex===i){
+                    display+=product.desc+'<br>';
+                    display +="<button onclick=hideDetails("+i+")>Hide Details</button>";
+                }else{
+                display +="<button onclick=showDetails("+i+")>Show Details</button>";
+                }
+                display +='</div>';
+                str+=display;
+            }
+            let element=document.getElementById('productid');
+            element.innerHTML=str;
+        }
+    </script>
+</html>

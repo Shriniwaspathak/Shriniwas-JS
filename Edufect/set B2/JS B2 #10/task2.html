@@ -1,0 +1,58 @@
+<html>
+    <head>
+<link rel="stylesheet" href="modifydisplay.css">
+    </head>
+    <body>
+        <h2>Product Details</h2>
+        <div id="productid" class="prdstyle"></div>
+    </body>
+    <script>
+        let p1={'name':'maggie','price':20,'Offers':["Citi Credit Cards","ICICI Card"]};
+        let p2={'name':'perk','price':30,'Offers':["Axis Credit Cards","PayTM"]};
+        let p3={'name':'gems','price':10,'Offers':["SBI Card","PhonePe","PayTM"]};
+        let p4={'name':'pepsi','price':25,'Offers':[]};
+        let p5={'name':'coca cola','price':75,'Offers':["Citi Credit Cards "]};
+        let p6={'name':'good day','price':35,'Offers':["PhonePe","PayTM"]};
+        let p7={'name':'dairy milk','price':45,'Offers':["SBI Card"]};
+        let p8={'name':'lindt','price':55,'Offers':[]};
+        let products =[p1,p2,p3,p4,p5,p6,p7,p8];
+        let detailIndex=-1;
+        show();
+        function showOffer(index){
+            detailIndex=index;
+            show();
+        }
+        function hideOffers(index){
+            detailIndex=-1;
+            show();
+        }
+        function show(){
+            let len=products.length;
+            let str=''
+            for(let i=0;i<len;i++){
+                let product=products[i];
+                let len1=product.Offers.length;
+                console.log(len1);
+                let display='<div class="cell">';
+                display +='name : '+product.name+'<br>';
+                display +='price : '+product.price+'<br>';
+                if(detailIndex===i){
+                    if(len1>0){
+                        product.Offers=len1+' offer from <br>'+product.Offers;
+                 display+=product.Offers+'<br>';
+                    }else{
+                        product.Offers.unshift('No Offers');
+                        display+=product.Offers+'<br>'
+                    }
+                 display +="<button onclick=hideOffers("+i+")>Hide Offers</button>";
+                }else{
+                display +="<button onclick=showOffer("+i+")>Show Offers</button>";
+                }
+                display +='</div>';
+                str+=display;
+            }
+            let element=document.getElementById('productid');
+            element.innerHTML=str;
+        }
+    </script>
+</html>

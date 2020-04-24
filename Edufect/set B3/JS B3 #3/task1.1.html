@@ -1,0 +1,25 @@
+<script>
+    arr=[{"name":"Jack","maths":55,"english":60,"science":62},
+          {"name":"Anita","maths":62,"english":65,"science":56},
+          {"name":"Thomas","maths":68,"english":58,"science":54},
+          {"name":"Steve","maths":51,"english":56,"science":68},
+          {"name":"Julia","maths":47,"english":77,"science":72},
+        {"name":"Mary","maths":72,"english":55,"science":60}];
+ arr.sort(compareName);
+ console.log(JSON.stringify(arr));
+
+ function compareName(per1,per2){
+       name1=per1.maths+per1.science;
+       name2=per2.maths+per2.science;
+       if(name1>name2){
+            return 1;
+        }
+        if(name1==name2){
+            return 0;
+        }
+        if(name1<name2){
+            return -1;
+        }
+ }
+
+</script>

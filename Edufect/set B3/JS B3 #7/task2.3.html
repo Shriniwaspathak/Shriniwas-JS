@@ -1,0 +1,21 @@
+<script>
+    let arr=["Hello","React","Java","Python","Hibernate", "JavaScript"];
+    let ch='y';
+    let x=arr.find(s=>fun1(s,ch));
+    console.log(x);
+    let y=arr.findIndex(s=>fun1(s,ch));
+    console.log(y);
+
+    function fun1(s,ch){
+        let len=s.length;
+        let s1=false;;
+        for(let i=0;i<len;i++){
+            if(s.charAt(i)===ch){
+              s1=true;
+              break;
+            }
+        }
+       return s1;
+    }
+
+</script>

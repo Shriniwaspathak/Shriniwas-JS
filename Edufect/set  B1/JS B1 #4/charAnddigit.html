@@ -1,0 +1,36 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="txt"><br>
+        <button onclick="largeString()">click Here</button>
+    </body>
+    <script>
+        function largeString(){
+           let inputfield=document.getElementById('txt');
+           let inputvalue=inputfield.value;
+           let digit='';
+           let lower='';
+           let upper='';
+            for(let i=0;i<inputvalue.length;i++){
+                let ch=inputvalue.charAt(i);
+                if(ch>='0' && ch <='9'){
+                    console.log(`${ch} is a digit`);
+                    digit=digit+ch;
+                }
+                if(ch>='A' && ch <='Z'){
+                    console.log(`${ch} is an Uppercase Character`);
+                    upper=upper+ch;
+                }
+                if(ch>='a' && ch <='z'){
+                    console.log(`${ch} is an Lowercase Character`);
+                    lower=lower+ch;
+                }
+            }
+            console.log("Digits =",digit);
+            console.log("Uppercase =",upper);
+            console.log("Lowercase =",lower);
+            
+        }
+    </script>
+</html>

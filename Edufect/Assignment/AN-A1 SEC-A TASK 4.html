@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+  Number:<input type="text" id="number"></br>
+  <button onclick="enter()">Click Here</button>
+</body>
+<script>
+    function enter(){
+    let Number=document.getElementById("number").value;
+    let num=+Number;
+    let num1=parseInt(Number/2);
+    let str="";
+    for(let i=1;i<=num1;i++){
+      if(num%i==0){
+        str=str+i+",";
+      }
+    }
+    console.log("Factorial of ",num," are ",str)
+    }
+  </script>
+  </html>

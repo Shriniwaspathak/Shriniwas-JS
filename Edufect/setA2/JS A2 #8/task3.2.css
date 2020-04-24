@@ -1,0 +1,28 @@
+.table{
+    margin: 30px;
+    padding: 3px;
+    border: 2px solid blue;
+    background-color: yellow ;
+}
+
+.cell{
+    display: inline-block;
+    width: 48%;
+    border: 2px solid gray;
+    background-color: #d4a387;
+   
+}
+.cells{
+    display: inline-block;
+    width: 48%;
+    border: 2px solid gray;
+    background-color:lightgreen;
+   
+}
+.num{
+    display: inline-block;
+    width: 48%;
+    border: 2px solid gray;
+    background-color: black;
+    color: white;
+}

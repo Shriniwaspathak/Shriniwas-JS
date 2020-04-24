@@ -1,0 +1,18 @@
+<script>
+    let arr=["Hi","Hello","Bye"];
+    
+    let max=arr.reduce((acc,curr)=>fnMax(acc,curr));
+           console.log(max);
+           function fnMax(acc,curr){
+               len1=acc.length;
+               len2=curr.length;
+               if(len2>len1){
+                   return curr;
+               }else{
+                   return acc;
+               }
+           }
+
+   
+    
+</script>

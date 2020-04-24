@@ -1,0 +1,28 @@
+<script>
+    let arr=[{"name":"Mary","marks":[42,65,55,71]},
+    {"name":"Anita","marks":[66,70,75,53]},
+    {"name":"Edward","marks":[44,54,64,58]},
+    {"name":"Thomas","marks":[62,55,65,81]},
+    {"name":"Robin","marks":[41,44,47,49]},
+    {"name":"Sophia","marks":[71,73,67,77]},
+    {"name":"Bruce","marks":[82,87,71,74]}];
+     var num=233;
+    let x2=arr.find(p=>fun(p,num));
+     let y2=arr.findIndex(p=>fun(p,num));
+     if(num){
+        console.log(num+': At index '+y2);
+     }else{
+        console.log("NOT FOUND");
+     }
+     function fun(p,num){
+         let total=0;
+         let len=p.marks.length;
+         for(let i=0;i<len;i++){
+             total+=p.marks[i];
+         }
+         
+         return total===num;
+         
+     }
+              
+</script>

@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="addTop()">Add Top</button><br>
+        <button onclick="removeTop()">Remove Top</button><br>
+        <button onclick="addEnd()">Add End</button><br>
+        <button onclick="removeEnd()">Remove End</button><br>
+    </body>
+    <script>
+        var arr=[1,2,3,4,5,6,7,8,9,10];
+        function addTop(){
+            let num=0;
+            arr.unshift(num);
+            console.log(arr);
+        }
+        function removeTop(){
+            arr.shift();
+            console.log(arr);
+        }
+        function addEnd(){
+            let num=10;
+            arr.push(num);
+            console.log(arr);
+        }
+        function removeEnd(){
+            arr.pop();
+            console.log(arr);
+        }
+    </script>
+</html>

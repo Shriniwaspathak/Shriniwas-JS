@@ -1,0 +1,36 @@
+.cell20{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    color: black;
+    background-color:lightgray;
+    margin: 1px;
+}
+.cell30{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    color: white;
+    background-color: lightgreen;
+    margin: 1px;
+}
+.cell40{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    color: white;
+    background-color: pink;
+    margin: 1px;
+ }
+.cell10{
+    display: inline-block;
+    width: 10%;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+.cell101{
+    display: inline-block;
+    width: 10%;
+    background-color: black;
+  }

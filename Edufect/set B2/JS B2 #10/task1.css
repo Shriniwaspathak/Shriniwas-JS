@@ -1,0 +1,24 @@
+.prdstyle{
+    background-color: lightblue;
+}
+.cell2{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px;
+    font-weight:bold ;
+    background-color:pink;
+}
+.cell{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px;
+    
+}

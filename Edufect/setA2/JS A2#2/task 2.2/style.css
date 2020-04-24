@@ -1,0 +1,15 @@
+.mytable{
+    text-align: center;
+}
+.multi4{
+    background-color:rgb(76, 204, 114);
+    color:black;
+}
+.notmulti4{
+    background-color:rgb(164, 214, 170);
+}
+.myheader{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}

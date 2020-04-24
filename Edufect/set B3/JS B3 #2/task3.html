@@ -1,0 +1,31 @@
+<script>
+    let arr=["JavaScript","Hello","React","Java","Python","Hibernate"];
+    arr.sort(compareString);
+    console.log(arr);
+
+    function compareString(str1,str2){
+        len1 =str1.length;
+        len2 =str2.length;
+        count1=0;
+        count2=0;
+        for(let i=0;i<len1 && len2;i++){
+           let ch1=str1.charAt(i);
+           let ch2=str2.charAt(i);
+            if(ch1=='a'){
+                count1++;
+            }
+            if(ch2=='a'){
+                count2++;
+            }
+        }
+          if(count1>count2){
+          return 1;
+         } 
+         if(count1==count2){
+          return 0;
+         } 
+      if(count1<count2){
+          return -1;
+      }
+    }
+</script>

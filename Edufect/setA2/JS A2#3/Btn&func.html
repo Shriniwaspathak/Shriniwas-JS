@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="showtext()">Show Text</button>
+    <br><br>    
+        <button onclick="changeText()">Change text</button>
+        <br>
+        <div id="textmsg"></div>
+    </body>
+    <script>
+     function showtext(){
+         let ele =document.getElementById('textmsg');
+         ele.innerHTML="Showing text on button click";
+     }
+     function changeText(){
+         let ele=document.getElementById('textmsg');
+         ele.innerHTML="changing the text";
+     }
+    </script>
+</html>

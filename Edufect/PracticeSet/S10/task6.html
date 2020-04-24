@@ -1,0 +1,31 @@
+<script>
+    let arr=[{"name":"Mary","marks":[72,65,55,71]},
+    {"name":"Anita","marks":[66,70,75,53]},
+    {"name":"Edward","marks":[44,54,64,58]},
+    {"name":"Thomas","marks":[62,55,65,81]},
+    {"name":"Robin","marks":[41,44,47,49]},
+    {"name":"Sophia","marks":[71,73,67,77]},
+    {"name":"Bruce","marks":[52,57,61,64]}];
+    let num1=75;
+    let arr1=arr.filter(p=>filterMarks(p,num1));
+    console.log(JSON.stringify(arr1));
+
+        function filterMarks(p,num1){
+              let len=p.marks.length;
+              let n=-1;
+            for(let i=0;i<len;i++){
+                 let n1=p.marks[i];
+                    if(n1>num1){
+                      n=0;
+                    break;
+                    }
+            }
+            if(n==0)
+            return true
+            else
+            return false;
+            
+        }    
+              
+              
+</script>

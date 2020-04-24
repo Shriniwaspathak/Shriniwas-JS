@@ -1,0 +1,22 @@
+<script>
+   let str="1234567brt";
+   let len=str.length;
+   let c=0;
+   let str1='';
+   for(let i=0;i<len;i++){
+       let a=str.charAt(i);
+       if(a==1){
+           str1+='A';
+       }else if(a==2){
+           str1+='B';
+       }else if(a==3){
+           str1+='C';
+       }else if(a>=4 && a<=9){
+           str1+='x';
+       }else{
+           str1+=a;
+       }
+   }
+   console.log(str1);
+              
+</script>

@@ -1,0 +1,15 @@
+<script>
+    let arr=["Hello","React","Java","Python","Hibernate", "JavaScript"];
+    let ch='a';
+    let x=arr.find(s=>fun1(s,ch));
+    console.log(x);
+    let y=arr.findIndex(s=>fun1(s,ch));
+    console.log(y);
+
+    function fun1(s,ch){
+        let len=s.length;
+        console.log(s.charAt(len-1)===ch);
+        return s.charAt(len-1)===ch;
+    }
+
+</script>

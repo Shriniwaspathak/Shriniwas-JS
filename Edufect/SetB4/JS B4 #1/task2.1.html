@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task2.1.css">
+    </head>
+    <body>
+        <button onclick="getArray()">Get Courses</button>
+        <div id="table"></div>
+    </body>
+    <script>
+        let urlnum="https://us-central1-fytpo-f6ed3.cloudfunctions.net/app/bins/18py7w";
+             function getArray(){
+                 getData(urlnum,showData);
+             }
+             function showData(data){
+                 console.log(data);
+                showTable(data);
+             }
+             function getData(url,fnResponse){
+            fetch(url)
+            .then(response=>{
+                return response.json();
+            })
+            .then(fnResponse)
+            .catch(err=>console.log(err));
+        }
+        function showTable(data){
+             let len=data.length;
+             let str='';
+             for(let i=0;i<len;i++){
+                 let pr=data[i];
+                 let course1='<div class="cell1">'+pr.course+'</div>';
+                 let desc1='<div class="cell">'+pr.desc+'</div>';
+                 let lesson1='<div class="cell1">'+pr.lesson+'</div>';
+                 let row='<div>'+course1+desc1+lesson1+'</div>';
+                 str+=row;
+             }
+             let table=document.getElementById('table');
+             table.innerHTML=str;
+             document.body.appendChild(table);
+            }
+    </script>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+     <button onclick="testPost()">Post Data</button>
+    </body>
+    <script>
+        let postURL="https://us-central1-fytpo-f6ed3.cloudfunctions.net/app/bins";
+        function testPost(){
+            let obj={"name":"Rishu","Age":22,"Email":"rishu@gmail.com"};
+            postData(postURL,obj,postfn);
+        }
+        function postfn(data){
+            console.log(data);
+        }
+        function postData(url,obj,handleResponse){
+        fetch(url,{
+            headers : new Headers({
+                "Content-Type":"application/json"
+            }),
+            method :"POST",
+            body : JSON.stringify(obj)
+        })
+        .then(response => {
+             return response.json();
+        })
+        .then(handleResponse)
+        .catch(err => console.log(err));
+        }
+
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+    </body>
+    <script>
+        let i=1;
+    document.write("<table class='mytable'>");
+        document.write("<tr class='myheader'>"); 
+        document.write("<td>Number</td>");
+        document.write("<td>Remainder</td>");
+        document.write("<td>Comment</td>");
+        document.write("</tr>");
+        let str1="";
+          for(i=1;i<=12;i++){
+              let rem4=i%4;
+              if(rem4==0){
+                document.write("<tr class='multi4'>");
+                str1="Multiple of 4"
+              }else{
+                document.write("<tr class='notmulti4'>");
+                str1="Not a Multiple of 4"
+              }
+        document.write("<td>",i,"</td>");
+        document.write("<td>",rem4,"</td>");
+        document.write("<td>",str1,"</td>");
+        document.write("</tr>");
+          }
+    document.write("</table>");
+    </script>
+</html>

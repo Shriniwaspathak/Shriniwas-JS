@@ -1,0 +1,33 @@
+<script>
+    arr=[{"name":"Mary","marks":[72,65,55,71]},
+    {"name":"Anita","marks":[66,70,75,53]},
+    {"name":"Edward","marks":[44,54,64,58]},
+    {"name":"Thomas","marks":[62,55,65,81]},
+    {"name":"Robin","marks":[41,44,47,49]},
+    {"name":"Sophia","marks":[71,73,67,77]},
+    {"name":"Bruce","marks":[52,57,61,64]}];
+    arr.sort(compare);
+    console.log(JSON.stringify(arr));
+    function compare(p1,p2){
+        let len1=p1.marks.length;
+        let len2=p2.marks.length;
+       let  max1=p1.marks[0];
+       let   max2=p2.marks[0];
+        for(let i=0;i<len1 && len2;i++){
+              if(p1.marks[0]<p1.marks[i]){
+                  max1=p1.marks[i];
+              } if(p2.marks[0]<p2.marks[i]){
+                  max2=p2.marks[i];
+              }
+        } 
+        if(max1<max2){
+            return 1;
+        }
+        if(max1==max2){
+            return 0;
+        }
+        if(max1>max2){
+            return -1;
+        }
+    }
+</script>

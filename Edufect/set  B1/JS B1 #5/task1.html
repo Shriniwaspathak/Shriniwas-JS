@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="txt"><br>
+        <input type="text" id="txt1"><br>
+        <button onclick="validate()">Validate</button>
+        <div id="txtvalid"></div>
+    </body>
+    <script>
+        function validate(){
+            let inpfeild=document.getElementById('txt');
+            let inpvalue=inpfeild.value;
+
+            let inpfeild2=document.getElementById('txt1');
+            let inpvalue2=inpfeild2.value;
+
+            let ele=document.getElementById('txtvalid');
+                let num1 = +inpvalue;
+                let num2= +inpvalue2
+            let valid=false;
+               if(num2>num1){
+                   valid=true;
+               }
+        if(valid){
+            ele.innerHTML="";
+            }else{
+                ele.innerHTML='The input text is invalid';
+            }
+        }
+    </script>
+</html>

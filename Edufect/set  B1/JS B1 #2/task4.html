@@ -1,0 +1,16 @@
+<script>
+    let str="JavaMasters";
+    let s1="";
+    for(let i=0;i<str.length;i++){
+        let ch=str.charAt(i);
+        if(i==0 ){
+           s1=s1+ ch;
+        }else if(i%2!=0){
+            s1=s1+'';
+        }
+        else{
+            s1=s1+ch;
+        }
+    }
+    console.log(`${s1}`);
+</script>

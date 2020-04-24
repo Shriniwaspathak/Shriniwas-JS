@@ -1,0 +1,28 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="mystyles.css">
+    </head>
+    <body> 
+    </body>
+    <script>
+        let i=1;
+    document.write("<table class='mytable'>");
+        document.write("<tr class='myheader'>"); 
+        document.write("<td>Number</td>");
+        document.write("<td>Squre</td>");
+        document.write("</tr>");
+          for(i=1;i<=10;i++){
+              let sq=i*i;
+              let rem2=i%2;
+              if(rem2==0){
+                document.write("<tr class='myroweven'>");
+              }else{
+                document.write("<tr class='myrowodd'>");
+              }
+        document.write("<td>",i,"</td>");
+        document.write("<td>",sq,"</td>");
+        document.write("</tr>");
+          }
+    document.write("</table>");
+    </script>
+</html>

@@ -1,0 +1,140 @@
+<html>
+<head>
+  <link rel="stylesheet" href="JS-AN-A2_SEC-B_TASK.css">
+</head>
+<body>
+  Name : <input type="text" id="name"></br>
+  Maths : <input type="text" id="math"></br>
+  English : <input type="text" id="eng"></br>
+  Computer : <input type="text" id="comp"></br>
+  <button onclick="addperson()" id="button">Add Person</button>
+  <div id="product"></div>
+</body>
+<script>
+    let p1={"name":"Jack","maths":81,"eng":30,"comp":66};
+    let p2={"name":"Tim","maths":50,"eng":90,"comp":55};
+    let p3={"name":"Sam","maths":58,"eng":98,"comp":26};
+    let p4={"name":"Mary","maths":79,"eng":71,"comp":60};
+    let person=[p1,p2,p3,p4];
+    showperson();
+
+    function remove(index){
+      if(index!=-1){
+         person.splice(index,1);
+           showperson();
+      }
+      else{
+        alert("Person not exists");
+      }
+    }
+    function getIndex(name111){
+      let len=person.length;
+      let index=-1;
+      for(let i=0;i<len;i++){
+        if(person[i].name===name111){
+          index=i;
+        }
+      }
+      return index;
+    }
+    function edit(index){
+      let name13=document.getElementById("txt1");
+      name13.value=person[index].name;
+      let maths13=document.getElementById("txt2");
+      maths13.value=person[index].maths;
+      let eng13=document.getElementById("txt3");
+      eng13.value=person[index].eng;
+      let comp13=document.getElementById("txt4");
+      comp13.value=person[index].comp;
+      let btn11=document.getElementById("button");
+      btn11.innerHTML="Update";
+      btn11.setAttribute("onclick","editproduct("+index+")")
+    }
+
+    function editproduct(index){
+       let name12=document.getElementById("name").value;
+      let maths12=document.getElementById("math").value;
+      let eng12=document.getElementById("eng").value;
+      let comp12=document.getElementById("comp").value;
+      let persondetails={"name":name12,"maths":maths12,"eng":eng12,"comp":comp12};
+      person[index]=persondetails;
+      name12="";
+      maths12="";
+      eng12="";
+      comp12="";
+      let btn11=document.getElementById("button");
+      btn11.innerHTML="Add Person";
+      btn11.setAttribute("onclick","add()");
+      showperson();
+    }
+    function addperson(){
+        let name12=document.getElementById("name").value;
+      let maths12=document.getElementById("math").value;
+      let eng12=document.getElementById("eng").value;
+      let comp12=document.getElementById("comp").value;
+      let persondetails={"name":name12,"maths":maths12,"eng":eng12,"comp":comp12};
+      if(getIndex(name12)<0){
+         person.push(persondetails);
+         showperson();
+      }
+      else{
+        alert("Person already exits");
+      }
+      name12="";
+      maths12="";
+      eng12="";
+      comp12=""; 
+    }
+    function showperson(){
+      let len=person.length;
+      let str="";
+      let name14="<div class='cell10'>Name</div>";
+      let maths14="<div class='cell10'>Maths</div>";
+      let eng14="<div class='cell10'>English</div>";
+      let comp14="<div class='cell10'>Computer</div>";
+      let remove14="<div class='cell101'>Remove</div>";
+      let edit14="<div class='cell101'>Edit</div>";
+      str=str+"<div>"+name14+maths14+eng14+comp14+remove14+edit14+"</div>";
+      for(let i=0;i<len;i++){
+        let name11="<div class='cell20'>"+person[i].name+"</div>";
+        let x1=person[i].maths;
+        let x2=person[i].eng;
+        let x3=person[i].comp;
+        if(x1>=70){
+          var y1="<div class='cell30'>"+x1+"</div>";
+        }
+        else if(x1<40){
+          var y1="<div class='cell40'>"+x1+"</div>";
+        }
+        else{
+          let y1="<div class='cell20'>"+x1+"</div>";
+        }
+        if(x2>=70){
+          var y2="<div class='cell30'>"+x2+"</div>";
+        }
+        else if(x2<40){
+          var y2="<div class='cell40'>"+x2+"</div>";
+        }
+        else{
+          var y2="<div class='cell20'>"+x1+"</div>";
+        }
+        if(x3>=70){
+          var y3="<div class='cell30'>"+x3+"</div>";
+        }
+        else if(x3<40){
+          var y2="<div class='cell40'>"+x3+"</div>";
+        }
+        else{
+          var y3="<div class='cell20'>"+x3+"</div>";
+        }
+        let btn1="<div class='cell20'><button onclick=remove("+i+")>Remove</button></div>";
+        let btn2="<div class='cell20'><button onclick=edit("+i+")>Edit</button></div>";
+        var row="<div>"+name11+y1+y2+y3+btn1+btn2+"<div>";
+         str=str+row;
+      }
+      let element=document.getElementById("product");
+      element.innerHTML=str;
+      document.body.appendChild(element);
+    }
+  </script>
+  </html>

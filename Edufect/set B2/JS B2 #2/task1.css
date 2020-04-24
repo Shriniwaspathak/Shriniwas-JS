@@ -1,0 +1,48 @@
+.cell{
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+    background-color:#446688;
+    color:white;
+    margin: 1px;
+}
+.cells{
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+    background-color:#6688AA;
+    color:white;
+    margin: 1px;
+}
+.cell1{
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    background-color: #446688;
+    color:white;
+    margin: 1px;
+}
+.cell1s{
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    background-color: #6688AA;
+    color:white;
+    margin: 1px;
+}
+.header{
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+    background-color:black;
+    color:white;
+    margin: 1px;
+}
+.header1{
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    background-color: black;
+    color:white;
+    margin: 1px;
+}

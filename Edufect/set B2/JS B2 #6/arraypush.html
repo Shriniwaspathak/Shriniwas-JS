@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+     <body>
+         First Name : <input type="text" id="fname"><br>
+         Last Name : <input type="text"id="lname"><br>
+         <button onclick="add()">Click Here</button><br>
+     </body>
+     <script>
+         let names=[];
+         function add(){
+         let fname=document.getElementById('fname').value;
+         let lname=document.getElementById('lname').value;
+         let name={'First Name':fname,'Last Name':lname};
+         names.push(name);
+         console.log(names);
+         }
+     </script>
+    </html>

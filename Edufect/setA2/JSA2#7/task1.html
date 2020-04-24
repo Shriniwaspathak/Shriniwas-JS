@@ -1,0 +1,31 @@
+<html>
+    <head>
+ <link rel="stylesheet" href="task1.css">
+ 
+    </head>
+    <body>
+        <button onclick="style1()">style1</button>
+        <button onclick="style2()">style2</button>
+        <button onclick="style3()">style3</button>
+    </body>
+    <script>
+        function style1(){
+        let div=document.createElement('div');
+         div.className='div1';
+         div.innerHTML=" STYLE1: margin= 20, padding= 20, border= 5";
+         document.body.append(div);
+        }
+        function style2(){
+        let div=document.createElement('div');
+         div.className='div2';
+         div.innerHTML=" STYLE1: margin= 40, padding= 10, border= 10";
+         document.body.append(div);
+        }
+        function style3(){
+        let div=document.createElement('div');
+         div.className='div3';
+         div.innerHTML=" STYLE1: margin= 10, padding= 40, border= 20";
+         document.body.append(div);
+        }
+    </script>
+</html>

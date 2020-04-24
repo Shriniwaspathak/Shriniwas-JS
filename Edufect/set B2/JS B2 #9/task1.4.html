@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="task1.1.css">
+    </head>
+    <body>
+        Name : <input type="text" id="nam"><br>
+        Age : <input type="text" id="age"><br>
+        City : <input type="text" id="cty"><br>
+        Technology : <input type="text" id="tech"><br>
+        <button  onclick="add()">Add Person</button>
+        <button  onclick="Remove()">Remove Person</button>
+        <div id="prsn"></div>  
+    </body>
+    <script>
+         let p1={'name':'Jack','Age':22,'City':'london','Technology':'Android'};
+        let p2={'name':'Mary','Age':25,'City':'NewYork','Technology':'JavaScript'};
+        let p3={'name':'Bob','Age':21,'City':'Peris','Technology':'React'};
+        let p4={'name':'Steve','Age':26,'City':'Delhi','Technology':'Angular'};
+        let person=[p1,p2,p3,p4];
+        showPerson();
+
+        function getName(namedel){
+            let len=person.length;
+            let index=-1;
+            for(let i=0;i<len;i++){
+                if(person[i].name===namedel)
+                    index=i;   
+            }
+            console.log(index);
+            return index;
+        }
+        function add(){
+            let name2=document.getElementById('nam');
+            let age2=document.getElementById('age');
+            let city2=document.getElementById('cty');
+            let tech2=document.getElementById('tech');
+            let per={'name':name2.value,'Age':age2.value,'City':city2.value,'Technology':tech2 .value};
+                person.push(per);
+                showPerson();
+        }
+        function Remove (i){
+            let namedel=document.getElementById('nam');
+            if(getName(namedel.value)>=0){    
+            person.splice(i,1);
+            }else {
+                alert("No person found with the name ");
+            }
+            showPerson();
+        }
+        function showPerson(){
+             let len=person.length;
+             let str='';
+             for(let i=0;i<len;i++){
+                 let pr=person[i];
+                 let name1='<div class="cell">'+pr.name+'</div>';
+                 let age1='<div class="cell1">'+pr.Age+'</div>';
+                 let city1='<div class="cell">'+pr.City+'</div>';
+                 let tech1='<div class="cell">'+pr.Technology+'</div>';
+                 let row='<div>'+name1+age1+city1+tech1+'</div>';
+                 str+=row;
+             }
+             let table=document.getElementById('prsn');
+             table.innerHTML=str;
+            }
+    </script>
+</html>

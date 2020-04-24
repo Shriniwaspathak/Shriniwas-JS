@@ -1,0 +1,50 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="show()">Show</button><br>
+    </body>
+    <script>
+        addRadio();
+
+        function show(){
+            let t1=document.getElementById('rd1').checked;
+            let t2=document.getElementById('rd2').checked;
+            let t3=document.getElementById('rd3').checked;
+            console.log(t1,t2,t3);
+        }
+        function addRadio(){
+            let radio1=document.createElement('input');
+            radio1.type='radio';
+            radio1.setAttribute('id','rd1');
+            radio1.setAttribute('name','crckt');
+            radio1.value='India';
+            document.body.appendChild(radio1);
+            let txt=document.createTextNode("India");
+            document.body.appendChild(txt);
+
+            let br=document.createElement("br");
+            document.body.appendChild(br);
+
+            let radio2=document.createElement('input');
+            radio2.type='radio';
+            radio2.setAttribute('id','rd2');
+            radio2.setAttribute('name','crckt');
+            radio2.value='Austrelia';
+            document.body.appendChild(radio2);
+            let txt1=document.createTextNode("Austrelia");
+          document.body.appendChild(txt1);
+        
+        let br1=document.createElement("br");
+            document.body.appendChild(br1);
+
+            let radio3=document.createElement('input');
+            radio3.type='radio';
+            radio3.setAttribute('id','rd3');
+            radio3.setAttribute('name','crckt');
+            radio3.value='England';
+            document.body.appendChild(radio3);
+            let txt2=document.createTextNode("England");
+            document.body.appendChild(txt2);
+        }
+    </script>
+</html>

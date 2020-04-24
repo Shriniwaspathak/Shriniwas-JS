@@ -1,0 +1,53 @@
+<html>
+<head>
+  <link rel="stylesheet" href="sec3task.css">
+</head>
+   <body>
+    <div id="game"></div>
+   </body>
+ <script>
+      let score1=0;
+      let score2=0;
+        gameShow();
+     function argentinaScore(){
+        score1++;
+      gameShow();
+        }
+     function brazilScore(){
+        score2++;
+       gameShow();
+       }
+    function gameShow(){
+      let str="";
+      let div1="<div> Football Match </div>";
+      let div2="<div> Argentina vs Brazil </div>";
+      let div3="<div>"+score1+"-"+score2;
+        str=str+div1+div2+div3;
+        if(score1==0 && score2==0){
+          let goal="<div class='cell1'>Still waiting for goal</div>";
+          str=str+goal;
+        }
+        else if(score1>score2){
+          let goal1=score1-score2;
+          let x1="<div class='cell3'>Argentina is leading by"+goal1+" goal</div>";
+          str=str+x1;
+        }
+        else if(score2>score1){
+          let goal2=score2-score1;
+          let x2="<div class='cell2'>Brazil is leading by"+goal2+" goal</div>";
+          str=str+x2;
+        }
+        else{
+          let x3="<div class='cell1'>The score is tied at"+score1+"-"+score1+"</div>";
+          str=str+x3;
+        }
+        let btn="<div><button class='cell3' onclick=argentinaScore()>Argentina scores a goal</button></div>";
+        let btn1="<div><button class='cell2' onclick=brazilScore()>Brazil scores a goal</button></div>";
+        str=str+btn+btn1;
+
+        let element=document.createElement('game');
+        element.innerHTML=str;
+        document.body.appendChild(element);
+        }
+    </script>
+    </html>

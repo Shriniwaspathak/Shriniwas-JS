@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+    Enter Number: <input type="text" id="num">
+    <button onclick="add()">Add</button>
+</body>
+<script>
+    var arr=[10,20,30,40,50,60];
+    function add(){
+        let num=document.getElementById('num').value;
+        for(let i=0;i<arr.length;i++){
+           // if(num!=isNaN && num>0){
+                if(arr[i]>num){
+                arr.splice(i,0, +num);
+                break;
+            }
+        
+    }
+    console.log(arr);
+}
+</script>
+</html>

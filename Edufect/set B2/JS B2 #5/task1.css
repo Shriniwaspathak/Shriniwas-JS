@@ -1,0 +1,8 @@
+.cell{
+    display: inline-block;
+    width: 23%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    margin: 1px;
+}

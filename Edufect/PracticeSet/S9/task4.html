@@ -1,0 +1,21 @@
+<script>
+    let arr=[{"name":"Jack","marks":88}, {"name":"Mary","marks":93},{"name":"Ed","marks":58}, {"name":"Tim","marks":63}]
+           console.log(JSON.stringify(arr));
+           arr.sort(compareMarks);
+           arr.reverse();
+           console.log(JSON.stringify(arr));
+
+           function compareMarks(std1,std2){
+            marks1=std1.marks;
+            marks2=std2.marks;
+            if(marks1>marks2){
+            return 1;
+        }
+        if(marks1==marks2){
+            return 0;
+        }
+        if(marks1<marks2){
+            return -1;
+        }
+           }
+</script>

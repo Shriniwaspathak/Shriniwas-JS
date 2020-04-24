@@ -1,0 +1,42 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="task1.css">
+    </head>
+    <body>    
+
+    </body>
+    <script>
+         document.write("<div class=header>"+"Product"+"</div>");
+         document.write("<div class=header>"+"Code"+"</div>");
+         document.write("<div class=header1>"+"Price"+"</div>");
+         document.write("<div class=header1>"+"Quantity"+"</div>");
+
+        const Product=['Pepsi','Coke','5Star','Maggie','Gems'];
+        const code=['P258','C147','S369','M741','G456'];
+        const price=[23,32,80,36,25];
+        const quantity=[23,32,80,36,100];
+        const len=Product.length;
+        var str='';
+        for(let i=0;i<len;i++){
+            if(i%2==0){
+            let product1="<div class='cell'>"+Product[i]+"</div>";
+            let code1="<div class='cell'>"+code[i]+"</div>";
+            let price1="<div class='cell1'>"+price[i]+"</div>";
+            let quantity1="<div class='cell1'>"+quantity[i]+"</div>";
+            let row='<div>'+product1+code1+price1+quantity1+'</div>';
+            str =str+row;
+        }else{
+            let product1="<div class='cells'>"+Product[i]+"</div>";
+            let code1="<div class='cells'>"+code[i]+"</div>";
+            let price1="<div class='cell1s'>"+price[i]+"</div>";
+            let quantity1="<div class='cell1s'>"+quantity[i]+"</div>";
+            let row='<div>'+product1+code1+price1+quantity1+'</div>';
+            str =str+row;
+        }
+        }
+        console.log(str);
+        let element=document.createElement('div');
+        element.innerHTML=str;
+        document.body.appendChild(element);
+    </script>
+</html>
