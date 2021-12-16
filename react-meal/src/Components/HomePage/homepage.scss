@@ -1,0 +1,58 @@
+.Home{
+    min-height: 100vh;
+    height: auto;
+    background: black;
+    color: blanchedalmond;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+&-search{
+    margin-top: 10px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    input{
+        padding: 10px;
+        outline: none;
+        border: 1px solid white;
+        width: 300px;
+        font-size: 18px;
+        border-radius: 10px;
+        
+    }
+    button{
+        font-size: 18px;
+        border: 1px solid white;
+        padding: 5px;
+        color: #fff;
+        background-color: #f3b542;
+        margin-left: 10px ;
+        border-radius: 5px;
+    }
+    }
+    &-grid{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+        .Home-meal{
+            text-align: center;
+        }
+        img{
+            width: 250px;
+            &:hover{
+    transform: scale(1.1);
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,41 @@
+
+html{
+  font-size: 62.5%;
+}
+body{
+  min-height: 100vh;
+  width: 100vw;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: blue;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.App{
+  text-align: center;
+}
+.App-link{
+  color: aqua;
+}
+div{
+ display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+h1{
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.btn{
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
+
+

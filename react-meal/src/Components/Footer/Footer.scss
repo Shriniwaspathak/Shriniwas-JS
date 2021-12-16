@@ -1,0 +1,18 @@
+.Footer{
+    height: 10vh;
+    background: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid #ccc;
+ 
+    p{
+        font-size: 18px;
+        span{
+            color:#f3b542;
+        }
+    }
+
+}

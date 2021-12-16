@@ -1,0 +1,14 @@
+.categories{
+    height: auto;
+    background: black;
+    color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+    img{
+        width: 188px;
+    }
+}
